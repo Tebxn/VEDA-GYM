@@ -1,5 +1,5 @@
 # VEDA Gym Supplies
-This repository have our final proyect. We hope you enjoy it and we 
+This repository have our final proyect. We hope you enjoy it and 
 we appreciate your feedback and comments.
 ## Components
 * Java as a programming lenguage.
