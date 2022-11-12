@@ -1,0 +1,22 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12 nov. 2022, 14:34:00
+    Author     : derec
+*/
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #f1f1f1;
+  }
+
+  .about-us{ 
+  width: 370px; 
+  height: 270px;
+  margin: 17px auto;
+  padding-top: 15px;
+  padding-bottom: 40px;  
+  padding-left: 50px;    
+  }
