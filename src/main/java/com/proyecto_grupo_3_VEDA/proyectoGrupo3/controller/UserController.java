@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
     
-    @GetMapping("/home")
+    @GetMapping("/index")
     public String index(Model model){
         return "home";
                 
