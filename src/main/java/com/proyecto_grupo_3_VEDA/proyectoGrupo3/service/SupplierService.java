@@ -13,8 +13,23 @@ public class SupplierService implements ISupplierService {
     private SupplierRepository supplierRepository;
     
     @Override
-    public List<Supplier> listSupplier() {
-        return (List<Supplier>)supplierRepository.findAll();
+    public List<Supplier> getAllSupplier() {
+        return (List<Supplier>) supplierRepository.findAll();
+    }
+
+    @Override
+    public Supplier getSupplierById(long id) {
+        return supplierRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void saveSupplier(Supplier supplier) {
+        supplierRepository.save(supplier);
+    }
+
+    @Override
+    public void delete(long id) {
+        supplierRepository.deleteById(id);
     }
     
 }
