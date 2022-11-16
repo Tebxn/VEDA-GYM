@@ -14,69 +14,69 @@ public class User implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-    private String nombre;
-    private String apellido1;
-    private String apellido2;
-    private String email;
-    private String direccion;
-    private String telefono;
+    private String cliente_cedula;
+    private String cliente_nombre;
+    private String cliente_apellido_1;
+    private String cliente_apellido_2;
+    private String cliente_email;
+    private String cliente_direccion;
+    private String cliente_telefono;
     private String password;
 
-    public String getId() {
-        return id;
+    public String getCliente_cedula() {
+        return cliente_cedula;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCliente_cedula(String cliente_cedula) {
+        this.cliente_cedula = cliente_cedula;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCliente_nombre() {
+        return cliente_nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCliente_nombre(String cliente_nombre) {
+        this.cliente_nombre = cliente_nombre;
     }
 
-    public String getApellido1() {
-        return apellido1;
+    public String getCliente_apellido_1() {
+        return cliente_apellido_1;
     }
 
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
+    public void setCliente_apellido_1(String cliente_apellido_1) {
+        this.cliente_apellido_1 = cliente_apellido_1;
     }
 
-    public String getApellido2() {
-        return apellido2;
+    public String getCliente_apellido_2() {
+        return cliente_apellido_2;
     }
 
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
+    public void setCliente_apellido_2(String cliente_apellido_2) {
+        this.cliente_apellido_2 = cliente_apellido_2;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCliente_email() {
+        return cliente_email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCliente_email(String cliente_email) {
+        this.cliente_email = cliente_email;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getCliente_direccion() {
+        return cliente_direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setCliente_direccion(String cliente_direccion) {
+        this.cliente_direccion = cliente_direccion;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getCliente_telefono() {
+        return cliente_telefono;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setCliente_telefono(String cliente_telefono) {
+        this.cliente_telefono = cliente_telefono;
     }
 
     public String getPassword() {

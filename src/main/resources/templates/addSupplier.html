@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>crear</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    </head>
+   
+    <head th:replace="plantilla/template::head"></head>
+    
     <body>
+        
+        <header th:replace="plantilla/template::header"></header>
+        
         <div class="container">
             <div class="card-header bg-black text-white"> </div>
             <div class="card-body">
                 <!-------------------Esto es un Formulario--------------- -->
                 <div class="container">
-                    <form th:object = "${suppplier}"
-                          th:action="@{/save}"
+                    <form th:object = "${supplier}"
+                          th:action="@{/saveSupplier}"
                           method="POST"
                           >
                         <input type="hidden" th:field="*{id}">
                         <div class="form-group mb-3 row">
-                            <label  class="col-md-2 col-form-label" for="nombre">Nombre</label>
+                            <label  class="col-md-2 col-form-label" for="nombre">Codigo del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre}"  placeholder= "Nombre Cliente" id="nombres" aria-describedby="emailHelp">
+                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{c_proveedor}"  placeholder= "Codigo del proveedor" id="c_proveedor" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
-                            <label  class="form-control-sm col-md-2  col-form-label" for="apellido1">Apellido 1</label>
+                            <label  class="form-control-sm col-md-2  col-form-label" for="apellido1">Nombre del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{apellido1}" class="form-control form-control-sm col-md-6" placeholder= "Apellido 1" id="apellido1" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{proveedor_nombre}" class="form-control form-control-sm col-md-6" placeholder= "Nombre del proveedor" id="proveedor_nombre" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
-                            <label  class="form-control-sm col-form-label col-md-2" for="apellido2">Apellido 2</label>
+                            <label  class="form-control-sm col-form-label col-md-2" for="apellido2">Cedula Juridica</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{apellido2}" class="form-control form-control-sm col-md-6" placeholder= "Apellido 2" id="apellido2" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{cedula_juridica}" class="form-control form-control-sm col-md-6" placeholder= "Cedula juridica correspondiente" id="cedula_juridica" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
-                            <label  class="form-control-sm col-form-label col-md-2" for="telefono">Telefono</label>
+                            <label  class="form-control-sm col-form-label col-md-2" for="telefono">Email del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{telefono}" class="form-control form-control-sm col-md-6" placeholder= "Telefono" id="telefono" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{proveedor_email}" class="form-control form-control-sm col-md-6" placeholder= "Correo Electronico del proveedor" id="proveedor_email" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
-                            <label  class="form-control-sm  col-form-label col-md-2" for="email">Email</label>
+                            <label  class="form-control-sm  col-form-label col-md-2" for="email">Telefono del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{email}" class="form-control form-control-sm col-md-6" placeholder= "Email" id="email" aria-describedby="emailHelp">
+                                <input type="text" th:field="*{proveedor_telefono}" class="form-control form-control-sm col-md-6" placeholder= "Telefono del proveedor" id="proveedor_telefono" aria-describedby="emailHelp">
                             </div>
                         </div>
-                        <div class="form-group mb-3 row">
-                            <label  class="form-control-sm col-form-label col-md-2" for="paises">Pais</label>
-                            <div class="col-sm-10">
-                                <select  th:field="*{pais}" class="form-control form-control-sm col-md-6" id="pais" aria-describedby="emailHelp">
-                                    <option th:each="x:${paises}"
-                                            th:value="${x.id}"
-                                            th:text="${x.pais}"/>
-                                </select>
-                            </div>
-                        </div>
+                        
                         <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        
+        <footer th:replace="plantilla/template::footer"></footer>
+    
     </body>
 </html>

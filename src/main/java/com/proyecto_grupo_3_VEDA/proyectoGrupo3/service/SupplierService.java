@@ -28,7 +28,7 @@ public class SupplierService implements ISupplierService {
     }
 
     @Override
-    public void delete(long id) {
+    public void deleteSupplier(long id) {
         supplierRepository.deleteById(id);
     }
     

@@ -14,8 +14,22 @@ public class UserService implements IUserService {
     private UserRepository userRepository;
     
     @Override
-    public List<User> listUser() {
-        return (List<User>)userRepository.findAll();
+    public List<User> getAllUser() {
+        return (List<User>) userRepository.findAll();
     }
-    
+
+    @Override
+    public User getUserById(long cliente_cedula) {
+        return userRepository.findById(cliente_cedula).orElse(null);
+    }
+
+    @Override
+    public void saveUser(User user) {
+        userRepository.save(user);
+    }
+
+    @Override
+    public void delete(long cliente_cedula) {
+        userRepository.deleteById(cliente_cedula);
+    }
 }

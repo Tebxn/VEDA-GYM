@@ -7,12 +7,18 @@
   <body>    
     <header th:replace="plantilla/template::header"></header>
     
+    <p>
+        
+        AGREGAR ESPACIO EN BLANCO AQUI
+        
+    </p>
+    
     <h1 th:text="${title}"></h1>
     
     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Id</th>
+      <th scope="col">Codigo</th>
       <th scope="col">Nombre</th>
       <th scope="col">Cedula Juridica</th>
       <th scope="col">Email</th>
@@ -23,23 +29,24 @@
   </thead>
   
   <tbody> 
-      <th:block th:each="user : ${supplier}">
+      <th:block th:each="user : ${suppliers}">
           <tr>
-           <td th:text="${user.getId}"></td>
-           <td th:text="${user.getSupplierName}"></td>
-           <td th:text="${user.getCedulaJuridica}"></td>
-           <td th:text="${user.getSupplierEmail}"></td>
-           <td th:text="${user.getSupplierPhone}"></td>
+           <td th:text="${user.getC_proveedor}"></td>
+           <td th:text="${user.getProveedor_nombre}"></td>
+           <td th:text="${user.getCedula_juridica}"></td>
+           <td th:text="${user.getProveedor_email}"></td>
+           <td th:text="${user.getProveedor_telefono}"></td>
            <td>
-               <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a>
+               <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a> <!--falta-->
            </td>
            <td>
-               <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+               <a th:href="@{/deleteSupplier/{id}(id=${user.getId})}">Delete</a> <!--falta-->
            </td>
           </tr>
       </th:block>
   </tbody>
 </table>
+    <p><a th:href="@{/addSupplier}"></a></p>
     
     
 <footer th:replace="plantilla/template::footer"></footer>
