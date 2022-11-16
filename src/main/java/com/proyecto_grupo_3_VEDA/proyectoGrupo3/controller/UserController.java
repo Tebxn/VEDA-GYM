@@ -42,5 +42,10 @@ public class UserController {
        userService.deleteUser(idUser);
        return "redirect:/userList";
    }
+   
+   @GetMapping("/returnHome")
+    public String returnHome(){
+        return "home";
+    }
 
 }
