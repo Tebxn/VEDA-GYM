@@ -21,7 +21,7 @@ public class SupplierController {
     public String index(Model model){
         List<Supplier> listSupplier = supplierService.getAllSupplier();
         model.addAttribute("titleSupplier", "Tabla Proveedores");
-        model.addAttribute("suppliers", listSupplier); //Arreglar no carga tabla proveedores es probable porque el id se esta usando varchar.
+        model.addAttribute("suppliers", listSupplier);
         return "supplierList";
     }
     

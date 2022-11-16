@@ -21,7 +21,7 @@ public class UserController {
     public String index(Model model){
         List<User> listUsers = userService.getAllUser();
         model.addAttribute("titleUser", "Tabla Usuarios");
-        model.addAttribute("users", listUsers); //Arreglar no carga tabla proveedores es probable porque el id se esta usando varchar.
+        model.addAttribute("users", listUsers);
         return "userList";
     }
     
@@ -40,7 +40,7 @@ public class UserController {
     @GetMapping("/deleteUser/{id}") //ARREGLAR
    public String deleteUser(@PathVariable("id") Long idUser){
        userService.deleteUser(idUser);
-       return "redirect:/supplierList";
+       return "redirect:/userList";
    }
 
 }
