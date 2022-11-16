@@ -20,7 +20,7 @@ public class SupplierController {
     @GetMapping("/supplierList")
     public String index(Model model){
         List<Supplier> listSupplier = supplierService.getAllSupplier();
-        model.addAttribute("title", "Tabla Proveedores");
+        model.addAttribute("titleSupplier", "Tabla Proveedores");
         model.addAttribute("suppliers", listSupplier); //Arreglar no carga tabla proveedores es probable porque el id se esta usando varchar.
         return "supplierList";
     }
@@ -43,7 +43,7 @@ public class SupplierController {
        return "redirect:/supplierList";
    }
    
-//   @GetMapping("/editPersona/{id}")
+//   @GetMapping("/editSupplier/{id}")
 //   public String editarPersona(@PathVariable("id") Long idPersona, Model model){
 //       Persona persona = personaService.getPersonaById(idPersona);
 //       List<Pais> listaPaises = paisService.listCountry();

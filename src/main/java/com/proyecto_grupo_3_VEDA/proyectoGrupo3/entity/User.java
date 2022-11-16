@@ -14,6 +14,7 @@ public class User implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String cliente_cedula;
     private String cliente_nombre;
     private String cliente_apellido_1;
@@ -22,6 +23,14 @@ public class User implements Serializable{
     private String cliente_direccion;
     private String cliente_telefono;
     private String password;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getCliente_cedula() {
         return cliente_cedula;
@@ -87,5 +96,5 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    
+   
 }

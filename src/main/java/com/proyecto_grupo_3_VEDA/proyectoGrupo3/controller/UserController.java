@@ -1,5 +1,7 @@
 package com.proyecto_grupo_3_VEDA.proyectoGrupo3.controller;
 
+import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.User;
+import com.proyecto_grupo_3_VEDA.proyectoGrupo3.service.IUserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,10 +14,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
     
-    @GetMapping("/index")
+    @Autowired
+    private IUserService userService;
+    
+    @GetMapping("/userList")
     public String index(Model model){
-        return "home";
-                
+        List<User> listUsers = userService.getAllUser();
+        model.addAttribute("titleUser", "Tabla Usuarios");
+        model.addAttribute("users", listUsers); //Arreglar no carga tabla proveedores es probable porque el id se esta usando varchar.
+        return "userList";
     }
+    
+    @GetMapping("/createAccount")
+    public String createUser(Model model){
+        model.addAttribute("user", new User());
+        return "createAccount";
+    }
+    
+    @PostMapping("/saveAccount")
+    public String saveUser(@ModelAttribute User user){
+        userService.saveUser(user);
+        return "redirect:/supplierList"; //cambiar esto
+    }
+    
+    @GetMapping("/deleteUser/{id}") //ARREGLAR
+   public String deleteUser(@PathVariable("id") Long idUser){
+       userService.deleteUser(idUser);
+       return "redirect:/supplierList";
+   }
 
 }

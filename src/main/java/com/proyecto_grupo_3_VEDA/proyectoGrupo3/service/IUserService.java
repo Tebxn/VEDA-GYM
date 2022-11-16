@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IUserService {
     public List<User> getAllUser();
-    public User getUserById(long cliente_cedula); //Como buscar si es String
+    public User getUserById(long id); //Como buscar si es String
     public void saveUser(User user);
-    public void delete(long cliente_cedula); //Como buscar si es String
+    public void deleteUser(long id); //Como buscar si es String
 }

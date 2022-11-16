@@ -11,30 +11,34 @@
         <br> 
     </p>
     
-    <h1 th:text="${titleSupplier}"></h1>
+    <h1 th:text="${titleUser}"></h1>
     <h3>Area administrativa</h3>
     
     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Codigo</th>
+      <th scope="col">Cedula</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Cedula Juridica</th>
+      <th scope="col">Primer Apellido</th>
+      <th scope="col">Segundo Apellido</th>
       <th scope="col">Email</th>
+      <th scope="col">Direccion</th>
       <th scope="col">Telefono</th>
-      <th scope="col">Editar</th>
-      <th scope="col">Eliminar</th>
+      <th scope="col">Password</th>
     </tr>
   </thead>
   
   <tbody> 
-      <th:block th:each="user : ${suppliers}">
+      <th:block th:each="user : ${users}">
           <tr>
-           <td th:text="${user.getC_proveedor}"></td>
-           <td th:text="${user.getProveedor_nombre}"></td>
-           <td th:text="${user.getCedula_juridica}"></td>
-           <td th:text="${user.getProveedor_email}"></td>
-           <td th:text="${user.getProveedor_telefono}"></td>
+           <td th:text="${user.getCliente_cedula}"></td>
+           <td th:text="${user.getCliente_nombre}"></td>
+           <td th:text="${user.getCliente_apellido_1}"></td>
+           <td th:text="${user.getCliente_apellido_2}"></td>
+           <td th:text="${user.getCliente_email}"></td>
+           <td th:text="${user.getCliente_direccion}"></td>
+           <td th:text="${user.getCliente_telefono}"></td>
+           <td th:text="${user.getPassword}"></td>
            <td>
                <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a> <!--falta-->
            </td>
@@ -45,7 +49,7 @@
       </th:block>
   </tbody>
 </table>
-    <p><a th:href="@{/addSupplier}">Agregar Proveedor</a></p>
+    <p><a th:href="@{/addUser}">Agregar Cliente</a></p>
     
     
 <footer th:replace="plantilla/template::footer"></footer>
