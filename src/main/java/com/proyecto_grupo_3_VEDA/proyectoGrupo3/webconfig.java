@@ -9,7 +9,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
-public class webconfig implements WebMvcConfigurer{
+public class Webconfig implements WebMvcConfigurer{
     
     @Bean
     public SessionLocaleResolver localeResolver (){
