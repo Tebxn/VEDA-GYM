@@ -6,37 +6,83 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Shop</title>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+       <link rel="stylesheet" href="productos.css">
+       
+       <style>
+           
+       </style>
+        
     </head>
     <body>
-        <div>TODO write content</div>
-        <div class="card">
-  <img src="..." class="card-img-top" alt="...">
-
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container">
+      <img src="./images/VEDA logo png.png" alt="VEDA Gym Logo">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+       
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="#">Articulos</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="#">Suplementos</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="#">Sobre Nosotros</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contáctenos</a>
+        </li>
+        
+         <li class="nav-item">
+          <i class="fa-regular fa-magnifying-glass"></i>
+          <i class="fa-regular fa-shopping-cart"></i>
+        </li>
+    </div>
   </div>
-</div>
+</nav>
+        
+        <section id="clothes" class="my-5">
+            <div class="container text-center mt-5 py-5">
+                <h3>Suplementos</h3>
+                <hr class="mx-auto">
+                <p>Estos suplementos te ayudaran a fortalecer tu condicion fisica</p>
+            </div>
+            <div class="row mx-auto container-fluid">
+                <div class="product text-center col-lg-3 col-md4 col-12">
+                    <img class="img-fluid mb-3" src="\Users\valer\Downloads\proteina.jpg" alt="">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">Proteina</h5>
+                    <h4 class="p-price">$96.00</h4>
+                    <button class="buy-btn">Compra</button>
+                </div>
+            </div>
+        </section>
+        
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+       
 
-<div class="card" aria-hidden="true">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title placeholder-glow">
-      <span class="placeholder col-6"></span>
-    </h5>
-    <p class="card-text placeholder-glow">
-      <span class="placeholder col-7"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-6"></span>
-      <span class="placeholder col-8"></span>
-    </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-  </div>
-</div>
     </body>
 </html>
