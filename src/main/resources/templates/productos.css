@@ -65,3 +65,15 @@ h6{
     font-weight: 500;
     transition: 0.3s ease;
 }
+
+.buy-btn{
+    color: black;
+    background-color: lightblue;
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    
+}
