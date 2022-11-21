@@ -31,14 +31,17 @@
   <tbody> 
       <th:block th:each="user : ${users}">
           <tr>
-           <td th:text="${user.getCliente_cedula}"></td>
-           <td th:text="${user.getCliente_nombre}"></td>
-           <td th:text="${user.getCliente_apellido_1}"></td>
-           <td th:text="${user.getCliente_apellido_2}"></td>
-           <td th:text="${user.getCliente_email}"></td>
-           <td th:text="${user.getCliente_direccion}"></td>
-           <td th:text="${user.getCliente_telefono}"></td>
+           <td th:text="${user.getCedula}"></td>
+           <td th:text="${user.getNombre}"></td>
+           <td th:text="${user.getApellido_1}"></td>
+           <td th:text="${user.getApellido_2}"></td>
+           <td th:text="${user.getEmail}"></td>
+           <td th:text="${user.getDireccion}"></td>
+           <td th:text="${user.getTelefono}"></td>
            <td th:text="${user.getPassword}"></td>
+           <td th:text="${user.getPermissions}"></td>
+           <td th:text="${user.getRoles}"></td>
+           <td th:text="${user.getActive}"></td>
            <td>
                <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a> <!--falta-->
            </td>

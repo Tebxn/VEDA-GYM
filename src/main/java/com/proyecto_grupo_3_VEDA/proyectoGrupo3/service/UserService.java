@@ -1,35 +1,22 @@
 package com.proyecto_grupo_3_VEDA.proyectoGrupo3.service;
 
-import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.User;
-import com.proyecto_grupo_3_VEDA.proyectoGrupo3.repository.UserRepository;
-import java.util.List;
+import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.Human;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class UserService implements IUserService {
+public class UserService implements UserDetailsService{
     
     @Autowired
-    private UserRepository userRepository;
+    public IHumanService userService;
     
     @Override
-    public List<User> getAllUser() {
-        return (List<User>) userRepository.findAll();
-    }
-
-    @Override
-    public User getUserById(long cliente_cedula) {
-        return userRepository.findById(cliente_cedula).orElse(null);
-    }
-
-    @Override
-    public void saveUser(User user) {
-        userRepository.save(user);
-    }
-
-    @Override
-    public void deleteUser(long id) {
-        userRepository.deleteById(id);
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+        Human user = this.userService.findByNombre(username);
+        UserPrincipal userPrincipal = new UserPrincipal(user);
+        return userPrincipal;
     }
 }
