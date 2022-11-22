@@ -47,5 +47,10 @@ public class HumanController {
     public String returnHome(){
         return "home";
     }
+    
+    @GetMapping("/products")    
+    public String viewProducts(){
+        return "products";
+    }
 
 }
