@@ -23,13 +23,13 @@ body{
   padding-left: 30px; 
 }
 input{
-  background-color: #f44336; 
+  background-color: #fff; 
   width: 400px; 
   height: 40px; 
   border-radius: 5px;  
   border-style: solid;
   border-width: 2px; 
-  border-color: #97d848;
+  border-color: #0e0e0e;
   margin-top: 10px;  
   padding-left: 10px;
   margin-bottom: 10px; 
@@ -37,7 +37,7 @@ input{
 
 
 textarea{
-  background-color: #7c4dff;
+  background-color: #fff;
   width: 400px; 
   height: 150px; 
   border-radius: 5px;  
@@ -79,7 +79,7 @@ button p{
 
 
 span{
-  color: #f44336;
+  color: red;
 }
 
 
@@ -102,12 +102,12 @@ p{
 
 
 ::-webkit-input-placeholder {
- color: #a8a8a8;
+ color: darkgrey;
 }
 
 
 ::-webkit-textarea-placeholder {
- color: #a8a8a8;
+ color: darkgrey;
 }
 
 
