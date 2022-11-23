@@ -33,19 +33,22 @@
                 <a class="nav-link active" aria-current="page" href="#" th:href="@{/products}">Supplements</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Props</a>
+                <a class="nav-link active" aria-current="page" href="#" th:href="@{/props}">Props</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" th:href="@{/machines}">Machines</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
               </li>
               <li sec:authorize="isAuthenticated()" class="nav-item">
-                  <a class="nav link" href="#" th:href="@{~/profile/index}">Profile</a>
+                  <a class="nav link active" href="#" th:href="@{~/profile/index}">Profile</a>
               </li>
               <li sec:authorize="hasRole('ROLE_CUSTOMER')" class="nav-item">
-                  <a class="nav link" href="#" th:href="@{/returnHome}">Customer</a>
+                  <a class="nav link active" href="#" th:href="@{/returnHome}">Customer</a>
               </li>
               <li sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" class="nav-item">
-                  <a class="nav link" href="#" th:href="@{~/management/index}">Management</a>
+                  <a class="nav link active" href="#" th:href="@{~/management/index}">Management</a>
               </li>
             </ul>
           </div>

@@ -52,5 +52,15 @@ public class HumanController {
     public String viewProducts(){
         return "products";
     }
+    
+    @GetMapping("/machines")    
+    public String viewMachines(){
+        return "maquinas";
+    }
+    
+    @GetMapping("/props")    
+    public String viewProps(){
+        return "articulos";
+    }
 
 }
