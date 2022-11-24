@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity;
 
 import java.io.Serializable;
@@ -9,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -18,45 +16,58 @@ public class Product implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id; 
-    private String productDescription;
-    private String idSupplier;
-    private String stock;
+    private long id; 
+    private String c_producto;
+    private String producto_descripcion;
+    private String tipo_producto;
+    private float existencia;
     private float precio_venta;
     private float precio_compra;
-    private String fecha_compra; 
     private String fecha_venta;
+    private String fecha_compra;
 
-    public String getId() {
+    @ManyToOne
+    @JoinColumn(name = "proveedor")
+    private Supplier proveedor;
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getProductDescription() {
-        return productDescription;
+    public String getC_producto() {
+        return c_producto;
     }
 
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    public void setC_producto(String c_producto) {
+        this.c_producto = c_producto;
     }
 
-    public String getIdSupplier() {
-        return idSupplier;
+    public String getProducto_descripcion() {
+        return producto_descripcion;
     }
 
-    public void setIdSupplier(String idSupplier) {
-        this.idSupplier = idSupplier;
+    public void setProducto_descripcion(String producto_descripcion) {
+        this.producto_descripcion = producto_descripcion;
     }
 
-    public String getStock() {
-        return stock;
+    public String getTipo_producto() {
+        return tipo_producto;
     }
 
-    public void setStock(String stock) {
-        this.stock = stock;
+    public void setTipo_producto(String tipo_producto) {
+        this.tipo_producto = tipo_producto;
+    }
+
+    public float getExistencia() {
+        return existencia;
+    }
+
+    public void setExistencia(float existencia) {
+        this.existencia = existencia;
     }
 
     public float getPrecio_venta() {
@@ -75,6 +86,14 @@ public class Product implements Serializable{
         this.precio_compra = precio_compra;
     }
 
+    public String getFecha_venta() {
+        return fecha_venta;
+    }
+
+    public void setFecha_venta(String fecha_venta) {
+        this.fecha_venta = fecha_venta;
+    }
+
     public String getFecha_compra() {
         return fecha_compra;
     }
@@ -83,12 +102,12 @@ public class Product implements Serializable{
         this.fecha_compra = fecha_compra;
     }
 
-    public String getFecha_venta() {
-        return fecha_venta;
+    public Supplier getProveedor() {
+        return proveedor;
     }
 
-    public void setFecha_venta(String fecha_venta) {
-        this.fecha_venta = fecha_venta;
+    public void setProveedor(Supplier proveedor) {
+        this.proveedor = proveedor;
     }
     
     

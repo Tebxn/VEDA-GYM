@@ -13,8 +13,23 @@ public class ProductService implements IProductService {
     private ProductRepository productRepository;
     
     @Override
-    public List<Product> listProduct() {
-        return (List<Product>)productRepository.findAll();
+    public List<Product> getAllProduct() {
+        return (List<Product>) productRepository.findAll();
+    }
+
+    @Override
+    public Product getProductById(long id) {
+        return productRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public void saveProduct(Product product) {
+        productRepository.save(product);
+    }
+
+    @Override
+    public void deleteProduct(long id) {
+        productRepository.deleteById(id);
     }
     
 }

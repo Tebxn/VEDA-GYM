@@ -5,5 +5,8 @@ import java.util.List;
 
 
 public interface IProductService {
-    public List<Product> listProduct();
+    public List<Product> getAllProduct();
+    public Product getProductById(long id); //Como buscar si es String
+    public void saveProduct(Product product);
+    public void deleteProduct(long id); //Como buscar si es String
 }
