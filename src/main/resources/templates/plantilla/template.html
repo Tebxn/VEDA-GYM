@@ -25,9 +25,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{/returnHome}">Home</a>
+                <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#" th:href="@{/products}">Supplements</a>
@@ -39,7 +40,10 @@
                 <a class="nav-link active" aria-current="page" href="#" th:href="@{/machines}">Machines</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                <a class="nav-link active" aria-current="page" href="#" th:href="@{/contactUs}">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}">About Us</a>
               </li>
               <li sec:authorize="isAuthenticated()" class="nav-item">
                   <a class="nav link active" href="#" th:href="@{~/profile/index}">Profile</a>
@@ -153,16 +157,13 @@
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                <a href="#!" class="text-white">Machines</a>
+                <a href="#!" th:href="@{/machines}" class="text-white">Machines</a>
               </p>
               <p>
-                <a href="#!" class="text-white">Props</a>
+                <a href="#!" th:href="@{/props}" class="text-white">Props</a>
               </p>
               <p>
-                <a href="#!" class="text-white">Food supplements</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Proteins</a>
+                <a href="#!" th:href="@{/machines}" class="text-white">Machines</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -185,10 +186,10 @@
                 <a href="#!" class="text-white">Shipping Rates</a>
               </p>
               <p>
-                <a href="#!" class="text-white">Help</a>
+                <a href="#!" th:href="@{/contactUs}" class="text-white">Help</a>
               </p>
               <p>
-                <a href="#!" class="text-white">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
+                <a href="#!" th:href="@{/legal}" class="text-white">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
               </p>
             </div>
             <!-- Grid column -->

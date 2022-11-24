@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Máquinas</title>
+        <title>Machines</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,43 +9,7 @@ and open the template in the editor.
        
     </head>
     <body>
-         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
-  <div class="container">
-     <img src="../static/images/dumbbell-icon.png" alt="VEDA Gym Logo">
-      <h4>VEDA</h4>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-       
-        <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
-        </li>
-        
-         <li class="nav-item">
-          <a class="nav-link" href="#">Articulos</a>
-        </li>
-        
-         <li class="nav-item">
-          <a class="nav-link" href="#">Suplementos</a>
-        </li>
-        
-         <li class="nav-item">
-          <a class="nav-link" href="#">Sobre Nosotros</a>
-        </li>
-        
-         <li class="nav-item">
-          <a class="nav-link" href="#">Contáctenos</a>
-        </li>
-        
-         <li class="nav-item">
-          <img  src="../static/images/search.png"></img>
-          <img src="../static/images/shopping-cart.png"></img>
-        </li>
-    </div>
-  </div>
-</nav>
+         <header th:replace="./plantilla/template::header"></header>
         
         <section id="clothes" class="my-5">
             <div class="container text-center mt-5 py-5">
@@ -62,7 +20,7 @@ and open the template in the editor.
             </div>
             <div class="row mx-auto container-fluid">
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="../static/images/m-poleas2.jpg" width=250px height=250px  alt="">
+                    <img class="img-fluid mb-3" src="images/m-poleas2.jpg" width=250px height=250px  alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -76,7 +34,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="../static/images/m-pesas.jpg" width=200px height=200px alt="">
+                    <img class="img-fluid mb-3" src="images/m-pesas.jpg" width=200px height=200px alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -90,7 +48,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="../static/images/m-piernas.png" width=175px height=175px  alt="">
+                    <img class="img-fluid mb-3" src="images/m-piernas.png" width=175px height=175px  alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -104,7 +62,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="../static/images/m-abdo.jpg" width=220px height=220px  alt="">
+                    <img class="img-fluid mb-3" src="images/m-abdo.jpg" width=220px height=220px  alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -118,7 +76,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="../static/images/m-caminadora.jpg" width=225px height=225px alt="">
+                    <img class="img-fluid mb-3" src="images/m-caminadora.jpg" width=225px height=225px alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -133,7 +91,7 @@ and open the template in the editor.
                 </div>
                
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" width=220px height=220px src="../static/images/m-brazos.jpg" alt="">
+                    <img class="img-fluid mb-3" width=220px height=220px src="images/m-brazos.jpg" alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -147,7 +105,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" width=250px height=250px src="../static/images/m-bicicleta.jpg" alt="">
+                    <img class="img-fluid mb-3" width=250px height=250px src="images/m-bicicleta.jpg" alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -161,7 +119,7 @@ and open the template in the editor.
                     <button class="buy-btn">Compra</button>
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" width=250px height=250px src="../static/images/m-superior.jpg" alt="">
+                    <img class="img-fluid mb-3" width=250px height=250px src="images/m-superior.jpg" alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
