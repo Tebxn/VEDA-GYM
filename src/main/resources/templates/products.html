@@ -24,9 +24,9 @@ and open the template in the editor.
         
         <section id="clothes" class="my-5">
             <div class="container text-center mt-5 py-5">
-                <h3>Suplementos</h3>
+                <h3 th:text="#{products.s}">Supplements</h3> <!-- Texto -->
                 <hr class="mx-auto">
-                <p>Estos suplementos te ayudaran a fortalecer tu condicion fisica</p>
+                <p th:text="#{products.s_text}">These supplements will help you strengthen your physical condition</p> <!-- Texto -->
             </div>
             <div class="row mx-auto container-fluid">
                 <div class="product text-center col-lg-3 col-md4 col-12">
@@ -38,10 +38,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Proteina</h5>
-                    <p>Proteina marca WHEY 780g</p>
+                    <h5 class="p-name" th:text="#{products.prd_p}">Protein</h5> <!-- Texto -->
+                    <p th:text="#{products.p_text}">WHEY brand protein 780g</p> <!-- Texto -->
                     <h4 class="p-price">$96.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/gel.jpg" alt="">
@@ -52,10 +52,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Gel</h5>
-                    <p>Energy Gel Roctane</p>
+                    <h5 class="p-name" th:text="#{products.prd_g}">Gel</h5> <!-- Texto -->
+                    <p th:text="#{products.g_text}">Energy Gel Roctane</p> <!-- Texto -->
                     <h4 class="p-price">$23.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/electrolitos.jpg" alt="">
@@ -66,10 +66,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Electrolitos</h5>
-                    <p>Electrolitos en capsulas Roctane</p>
+                    <h5 class="p-name" th:text="#{products.prd_e}">Electrolytes</h5> <!-- Texto -->
+                    <p th:text="#{products.e_text}">Electrolytes in Roctane capsules</p> <!-- Texto -->
                     <h4 class="p-price">$34.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/vita3.jpg" alt="">
@@ -80,10 +80,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Vitaminas</h5>
-                    <p>Vitamina C de 500mg</p>
+                    <h5 class="p-name" th:text="#{products.prd_v}">Vitamins</h5> <!-- Texto -->
+                    <p th:text="#{products.v_text}">500mg Vitamin C</p> <!-- Texto -->
                     <h4 class="p-price">$30.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/cr.png" width=225px height=225px alt="">
@@ -94,10 +94,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Creatina</h5>
+                    <h5 class="p-name" th:text="#{products.prd_c}">Creatina</h5> <!-- Texto -->
                     <h4 class="p-price">$55.00</h4>
-                    <p>Creatina marca MuscleTech 870g</p>
-                    <button class="buy-btn">Compra</button>
+                    <p th:text="#{products.c_text}">Creatina marca MuscleTech 870g</p> <!-- Texto -->
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                
                 <div class="product text-center col-lg-3 col-md4 col-12">
@@ -109,10 +109,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Energy Drink</h5>
+                    <h5 class="p-name" th:text="#{products.prd_ed}">Energy Drink</h5> <!-- Texto -->
                     <h4 class="p-price">$22.00</h4>
-                    <p>Amino Energy Drink 500ml</p>
-                    <button class="buy-btn">Compra</button>
+                    <p th:text="#{products.ed_text}">Amino Energy Drink 500ml</p> <!-- Texto -->
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" width=218px height=218px src="images/fat-burner.jpg" alt="">
@@ -123,10 +123,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Fat Burner</h5>
-                    <p>LipoBlack 5 Fat Burner</p>
+                    <h5 class="p-name" th:text="#{products.prd_fb}">Fat Burner</h5> <!-- Texto -->
+                    <p th:text="#{products.fb_text}">LipoBlack 5 Fat Burner</p> <!-- Texto -->
                     <h4 class="p-price">$58.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" width=215px height=215px src="images/nitraflex.jpg" alt="">
@@ -137,10 +137,10 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Nitraflex</h5>
-                    <p>Enchancing Powder 780g</p>
+                    <h5 class="p-name" th:text="#{products.prd_n}">Nitraflex</h5> <!-- Texto -->
+                    <p th:text="#{products.n_text}">Enchancing Powder 780g</p> <!-- Texto -->
                     <h4 class="p-price">$45.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
              
             </div>

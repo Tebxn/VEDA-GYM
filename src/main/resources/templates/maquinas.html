@@ -13,10 +13,9 @@
         
         <section id="clothes" class="my-5">
             <div class="container text-center mt-5 py-5">
-                <h3>Máquinas de Entrenamiento</h3>
+                <h3 th:text="#{maquinas.tm}">Training machine</h3> <!-- texto -->
                 <hr class="mx-auto">
-                <p>Te ofrecemos estas máquinas para armar tu propio
-                gimnasio en casa.</p>
+                <p th:text="#{maquinas.tm_text}">We offer you these machines to build your own gym at home.</p> <!-- texto -->
             </div>
             <div class="row mx-auto container-fluid">
                 <div class="product text-center col-lg-3 col-md4 col-12">
@@ -28,10 +27,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Poleas</h5>
-                    <p>Máquina para Poleas</p>
+                    <h5 class="p-name" th:text="#{maquinas.prd_p}">Pulleys</h5> <!-- texto -->
+                    <p th:text="#{maquinas.p_text}">Pulley Machine</p> <!-- texto -->
                     <h4 class="p-price">$800.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/m-pesas.jpg" width=200px height=200px alt="">
@@ -42,10 +41,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Máquina Pesas</h5>
-                    <p>Máquina de Levantamiento de Pesas</p>
+                    <h5 class="p-name" th:text="#{maquinas.prd_mp}">Weight machine</h5> <!-- texto -->
+                    <p th:text="#{maquinas.mp_text}">Weight Lifting Machine</p> <!-- texto -->
                     <h4 class="p-price">$1,500.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/m-piernas.png" width=175px height=175px  alt="">
@@ -56,10 +55,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Máquina para Piernas</h5>
-                    <p>Máquina levantamiento Piernas</p>
+                    <h5 class="p-name" th:text="#{maquinas.prd_mpp}">Leg Machine</h5> <!-- texto -->
+                    <p th:text="#{maquinas.mpp_text}">Leg Raising Machine</p> <!-- texto -->
                     <h4 class="p-price">$1,645.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/m-abdo.jpg" width=220px height=220px  alt="">
@@ -70,10 +69,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Plancha</h5>
-                    <p>Plancha para Abdominales</p>
+                    <h5 class="p-name" th:text="#{maquinas.prd_plch}">Chest press</h5> <!-- texto -->
+                    <p th:text="#{maquinas.plch_text}">Chest press machine</p> <!-- texto -->
                     <h4 class="p-price">$950.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" src="images/m-caminadora.jpg" width=225px height=225px alt="">
@@ -84,10 +83,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Caminadora</h5>
+                    <h5 class="p-name" th:text="#{maquinas.prd_cmd}">Treadmill</h5> <!-- texto -->
                     <h4 class="p-price">$55.00</h4>
-                    <p>Máquina para ejercitar piernas</p>
-                    <button class="buy-btn">Compra</button>
+                    <p th:text="#{maquinas.cmd_text}">Leg exercise machine</p> <!-- texto -->
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                
                 <div class="product text-center col-lg-3 col-md4 col-12">
@@ -99,10 +98,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Máquina de Brazos</h5>
-                    <h4 class="p-price">$2,000.00</h4>
-                    <p>Máquina para el levantamiento del tren superior</p>
-                    <button class="buy-btn">Compra</button>
+                    <h5 class="p-name" th:text="#{maquinas.prd_mb}">Arm machine</h5> <!-- texto -->
+                    <h4 class="p-price">$2,000.00</h4> 
+                    <p th:text="#{maquinas.mb_text}">Upper body lifting machine</p> <!-- texto -->
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" width=250px height=250px src="images/m-bicicleta.jpg" alt="">
@@ -113,10 +112,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Bicicleta</h5>
-                    <p>Máquina para ejercitar el tren inferior</p>
-                    <h4 class="p-price">$950.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <h5 class="p-name" th:text="#{maquinas.prd_bc}">Stationary bicycle</h5> <!-- texto -->
+                    <p th:text="#{maquinas.bc_text}">Lower body exercise machine</p> <!-- texto -->
+                    <h4 class="p-price">$950.00</h4> 
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">
                     <img class="img-fluid mb-3" width=250px height=250px src="images/m-superior.jpg" alt="">
@@ -127,10 +126,10 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name">Poleas 2.0</h5>
-                    <p>Máquina para ejercitar tren superior</p>
-                    <h4 class="p-price">$1,150.00</h4>
-                    <button class="buy-btn">Compra</button>
+                    <h5 class="p-name" th:text="#{maquinas.prd_pl2}">Pulleys 2.0</h5> <!-- texto -->
+                    <p th:text="#{maquinas.pl2_text}">Upper body exercise machine</p> <!-- texto -->
+                    <h4 class="p-price">$1,150.00</h4> 
+                    <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto -->
                 </div>
              
             </div>

@@ -12,19 +12,19 @@
     </p>
     
     <h1 th:text="${titleUser}"></h1>
-    <h3>Area administrativa</h3>
+    <h3 th:text="#{human.sub_title}">Administrativ Area</h3> <!-- Texto -->
     
     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Cedula</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Primer Apellido</th>
-      <th scope="col">Segundo Apellido</th>
-      <th scope="col">Email</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Password</th>
+      <th scope="col" th:text="#{human.ced}">Cedula</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.name}">Nombre</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.ape}">Primer Apellido</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.apell}">Segundo Apellido</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.email}">Email</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.dirc}">Direccion</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.tel}">Telefono</th> <!-- Texto -->
+      <th scope="col" th:text="#{human.password}">Password</th> <!-- Texto -->
     </tr>
   </thead>
   
@@ -43,16 +43,16 @@
            <td th:text="${user.getRoles}"></td>
            <td th:text="${user.getActive}"></td>
            <td>
-               <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a> <!--falta-->
+               <a th:href="@{/editSupplier/{id}(id=${user.getId})}" th:text="#{human.edit}">Edit</a> <!--falta--> <!-- Texto -->
            </td>
            <td>
-               <a th:href="@{/deleteUser/{id}(id=${user.getId})}">Delete</a> <!--falta-->
+               <a th:href="@{/deleteUser/{id}(id=${user.getId})}" th:text="#{human.delete}">Delete</a> <!--falta--> <!-- Texto -->
            </td>
           </tr>
       </th:block>
   </tbody>
 </table>
-    <p><a th:href="@{/addUser}">Agregar Cliente</a></p>
+    <p><a th:href="@{/addUser}" th:text="#{human.add}">Agregar Cliente</a></p> <!-- Texto -->
     
     
 <footer th:replace="plantilla/template::footer"></footer>

@@ -28,28 +28,29 @@
               
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+                  <a class="nav-link active" aria-current="page" th:href="@{/home}" th:text="#{home.inicio}">Home</a> <!-- Texto de home -->
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" th:href="@{/products}">Supplements</a>
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/products}" th:text="#{home.suplementos}">Supplements</a> <!-- Texto de home-->
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" th:href="@{/props}">Props</a>
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/props}" th:text="#{templates.props}">Props</a> <!-- Texto -->
+                
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" th:href="@{/machines}">Machines</a>
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/machines}" th:text="#{home.machines}">Machines</a> <!-- Texto de home-->
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" th:href="@{/contactUs}">Contact Us</a>
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/contactUs}" th:text="#{home.contactenos}">Contact Us</a><!-- Texto de home -->
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}">About Us</a>
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}" th:text="#{home.abu}">About Us</a> <!-- Texto de home -->
               </li>
               <li sec:authorize="hasRole('ROLE_CUSTOMER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{/returnHome}">Customer</a>
+                  <a class="nav link active" href="#" th:href="@{/returnHome}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
               </li>
               <li sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{~/management/index}">Management</a>
+                  <a class="nav link active" href="#" th:href="@{~/management/index}" th:text="#{template.managment}">Management</a> <!-- Texto -->
               </li>
             </ul>
           </div>
@@ -64,19 +65,19 @@
     <div>
             <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Digite su nombre</label>
+      <label for="exampleInputEmail1" class="form-label" th:text="#{template.int_number}">Enter your number</label> <!-- Texto -->
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Agregue su nombre completo.</div>
+    <div id="emailHelp" class="form-text" th:text="#{template.int_name}">Add your full name</div> <!-- Texto -->
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Digite su edad</label>
+      <label for="exampleInputPassword1" class="form-label" th:text="#{template.int_age}">Enter your age</label <!-- Texto -->
     <input type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Confirme</label>
+    <label class="form-check-label" for="exampleCheck1" th:text="#{template.conf}">Confirm</label> <!-- Texto -->
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" th:text="#{template.submi}">Submit</button> <!-- Texto -->
 </form>
         </div>
     
@@ -95,7 +96,7 @@
                >
         <!-- Left -->
         <div class="me-5">
-          <span>Get connected with us on social networks:</span>
+            <span th:text="#{template.text_net}">Get connected with us on social networks:</span> <!-- Texto -->
         </div>
         <!-- Left -->
   
@@ -132,35 +133,35 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
-              <h6 class="text-uppercase fw-bold">VEDA Gym Supplies</h6>
+              <h6 class="text-uppercase fw-bold" th:text="#{template.text_sp}">VEDA Gym Supplies</h6> <!-- texto -->
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
-              <p>
-                Our company is dedicated to providing you the
-                 best accessories and supplements to increase your muscle gains
-                 and achive faster your goals.
-              </p>
+              <p th:text="#{template.text_info}"> <!-- Texto -->
+                  Our company is dedicated to providing you the
+                  best accessories and supplements to increase your muscle gains
+                  and achive faster your goals.
+              </p> 
             </div>
             <!-- Grid column -->
   
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Products</h6>
+              <h6 class="text-uppercase fw-bold" th:text="#{template.products}">Products</h6> <!-- Texto -->
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                <a href="#!" th:href="@{/machines}" class="text-white">Machines</a>
+                <a href="#!" th:href="@{/machines}" class="text-white" th:text="#{home.machines}">Machines</a> <!-- Texto de home -->
               </p>
               <p>
-                <a href="#!" th:href="@{/props}" class="text-white">Props</a>
+                <a href="#!" th:href="@{/props}" class="text-white" th:text="#{home.props}">Props</a> <!-- Texto de home  -->
               </p>
               <p>
-                <a href="#!" th:href="@{/machines}" class="text-white">Machines</a>
+                  <a href="#!" th:href="@{/machines}" class="text-white" th:text="#{home.machines}">Machines</a> <!-- Texto de home --> <!-- Porq dice Machine 2 veces? -->
               </p>
             </div>
             <!-- Grid column -->
@@ -168,28 +169,28 @@
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <h6 class="text-uppercase fw-bold" th:text="#{template.us_link}">Useful links</h6> <!-- Texto -->
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"
                   />
               <p>
-                <a href="#!" class="text-white">Your Account</a>
+                <a href="#!" class="text-white" th:text="#{template.yr_acco}">Your Account</a> <!-- Texto -->
               </p>
               <p>
-                <a href="#!" class="text-white">Become an Affiliate</a>
+                <a href="#!" class="text-white" th:text="#{template.be_aff}">Become an Affiliate</a> <!-- Texto -->
               </p>
               <p>
-                <a href="#!" class="text-white">Shipping Rates</a>
+                <a href="#!" class="text-white" th:text="#{template.ship_rt}">Shipping Rates</a> <!-- Texto -->
               </p>
               <p>
-                <a href="#!" th:href="@{/contactUs}" class="text-white">Help</a>
+                <a href="#!" th:href="@{/contactUs}" class="text-white" th:text="#{template.help}">Help</a> <!-- Texto -->
               </p>
               <p>
 <<<<<<< HEAD
-                <a href="#!" class="text-white">Terms and Conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
+<a href="#!" class="text-white" th:text="#{template.t_and_c}">Terms and Conditions</a> <!-- aqui se colocaran los terminos yh condicciones  --> <!-- texto -->
 =======
-                <a href="#!" th:href="@{/legal}" class="text-white">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
+<a href="#!" th:href="@{/legal}" class="text-white" th:text="#{template.t_and_c}">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  --> <!-- texto -->
 >>>>>>> fc71d9f28758c350104fa4a65d6379dd9e5797ad
               </p>
             </div>
@@ -198,7 +199,7 @@
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <h6 class="text-uppercase fw-bold" th:text="#{home.contactenos}">Contact us</h6> <!-- Texto de home -->
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"
                   style="width: 60px; background-color: #7c4dff; height: 2px"

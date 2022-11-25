@@ -9,22 +9,22 @@
     <body>
         <header th:replace="plantilla/template::header"></header>
         
-        <h1 th:text="${titulo}"></h1>
+        <h1 th:text="${titulo}" th:text="#{productlist.tit}"></h1>
         
         <br>
         
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Proveedor</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Existencias</th>
-                    <th scope="col">Precio Compra</th>
-                    <th scope="col">Precio Venta </th>
-                    <th scope="col">Fecha Compra</th>
-                    <th scope="col">Fecha Venta</th>
+                    <th scope="col" th:text="#{productlist.code}">Code</th>
+                    <th scope="col" th:text="#{productlist.desc}">Description</th>
+                    <th scope="col" th:text="#{productlist.prov}">Supplier</th>
+                    <th scope="col" th:text="#{productlist.tipe}">Type</th>
+                    <th scope="col" th:text="#{productlist.ex}">Stock</th>
+                    <th scope="col" th:text="#{productlist.pp}">Purchase Price</th>
+                    <th scope="col" th:text="#{productlist.sp}">Sale price</th>
+                    <th scope="col" th:text="#{productlist.pd}">Purchase Date</th>
+                    <th scope="col" th:text="#{productlist.sd}">Sale date</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,10 +40,10 @@
                     <td th:text="${user.getFecha_venta}"></td>
 
                     <td>
-                        <a th:href="@{/editProduct/{id}(id=${user.getId})}">Edit</a>
+                        <a th:href="@{/editProduct/{id}(id=${user.getId})}" th:text="#{productlist.edit}">Edit</a>
                     </td>
                     <td>
-                        <a th:href="@{/deleteProduct/{id}(id=${user.getId})}">Delete</a>
+                        <a th:href="@{/deleteProduct/{id}(id=${user.getId})}" th:text="#{productlist.delete}">Delete</a>
                     </td>
                 </tr>
             </th:block>

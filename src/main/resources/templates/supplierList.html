@@ -11,19 +11,19 @@
         <br> 
     </p>
     
-    <h1 th:text="${titleSupplier}"></h1>
-    <h3>Area administrativa</h3>
+    <h1 th:text="${titleSupplier}" th:text="#{supplierlist.tit}"></h1> <!-- Texto -->
+    <h3 th:text="#{supplierlist.sub_tit}">Area administrativa</h3> <!-- Texto -->
     
     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Codigo</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Cedula Juridica</th>
-      <th scope="col">Email</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Editar</th>
-      <th scope="col">Eliminar</th>
+      <th scope="col" th:text="#{supplierlist.cod}">Code</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.name}">Name</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.ced}">Legal ID</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.email}">Email</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.tel}">Phone</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.edit}">Edit</th> <!-- Texto -->
+      <th scope="col" th:text="#{supplierlist.delit}">Delet</th> <!-- Texto -->
     </tr>
   </thead>
   
@@ -36,16 +36,16 @@
            <td th:text="${user.getProveedor_email}"></td>
            <td th:text="${user.getProveedor_telefono}"></td>
            <td>
-               <a th:href="@{/editSupplier/{id}(id=${user.getId})}">Edit</a> <!--falta-->
+               <a th:href="@{/editSupplier/{id}(id=${user.getId})}" th:text="#{supplierlist.edit}">Edit</a> <!--falta--> <!-- Texto -->
            </td>
            <td>
-               <a th:href="@{/deleteSupplier/{id}(id=${user.getId})}">Delete</a> <!--falta-->
+               <a th:href="@{/deleteSupplier/{id}(id=${user.getId})}" th:text="#{supplierlist.delit}">Delete</a> <!--falta--> <!-- Texto -->
            </td>
           </tr>
       </th:block>
   </tbody>
 </table>
-    <p><a th:href="@{/addSupplier}">Agregar Proveedor</a></p>
+    <p><a th:href="@{/addSupplier}" th:text="#{supplierlist.add}">Add Provider</a></p> <!-- Texto -->
     
     
 <footer th:replace="plantilla/template::footer"></footer>

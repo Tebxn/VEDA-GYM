@@ -34,16 +34,16 @@ and open the template in the editor.
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#" th:text="#{home.inicio}">Home</a> <!-- Texto de home -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Supplemets</a>
+            <a class="nav-link" href="#" th:text="#{home.suplementos}">Supplemets</a> <!-- texto de home -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#" th:text="#{templates.props}">Props</a> <!-- Texto de home -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#" th:text="#{home.contactenos}">Contact Us</a> <!-- Texto de home -->
         </li>
       </ul>
       <!-- Left links -->
@@ -73,13 +73,13 @@ and open the template in the editor.
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
           <li>
-            <a class="dropdown-item" href="#">My profile</a>
+              <a class="dropdown-item" href="#" th:text="#{inventory.mp}">My profile</a> <!-- texto -->
           </li>
           <li>
-            <a class="dropdown-item" href="#">Settings</a>
+              <a class="dropdown-item" href="#" th:text="#{inventory.set}">Settings</a> <!-- texto -->
           </li>
           <li>
-            <a class="dropdown-item" href="#">Logout</a>
+              <a class="dropdown-item" href="#" th:text="#{inventory.logout}">Logout</a> <!-- texto -->
           </li>
         </ul>
       </div>
@@ -100,7 +100,7 @@ and open the template in the editor.
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
+        <span th:text="#{inventory.text_sp}">Get connected with us on social networks:</span> <!-- texto -->
     </div>
     <!-- Left -->
 
@@ -138,11 +138,11 @@ and open the template in the editor.
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+              <i class="fas fa-gem me-3" ></i>VEDAGYM <!-- decia Company name -->
           </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+          <p th:text="#{inventory.text_ht}"> <!-- texto -->
+              Here you can use rows and columns to organize your footer content. Lorem ipsum 
+              dolor sit amet, consectetur adipisicing elit.
           </p>
         </div>
         <!-- Grid column -->
@@ -158,7 +158,7 @@ and open the template in the editor.
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <h6 class="text-uppercase fw-bold mb-4" th:text="#{home.contactenos}">Contact us</h6> <!-- Texto de home -->
           <p><i class="fas fa-home me-3"></i> San José, Costa Rica </p>
           <p>
             <i class="fas fa-envelope me-3"></i>
