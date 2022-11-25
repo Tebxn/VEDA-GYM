@@ -185,7 +185,7 @@
                 <a href="#!" class="text-white">Help</a>
               </p>
               <p>
-                <a href="#!" class="text-white">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
+                <a href="#!" class="text-white">Terms and Conditions</a> <!-- aqui se colocaran los terminos yh condicciones  -->
               </p>
             </div>
             <!-- Grid column -->
@@ -221,9 +221,17 @@
           >
       </div>
       <!-- Copyright -->
+      
+      <!-- Tomar lenguaje de la pagina -->
+      <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+         th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>
+      <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+         th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
+      
+      <!-- Tomar lenguaje de la pagina -->
     </footer>
     <!-- Footer -->
-  
+
   </div>
   <!-- End of .container -->
 </div>

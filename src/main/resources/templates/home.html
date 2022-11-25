@@ -27,23 +27,23 @@ SEBASTIAN PACAS-->
       <ul class="navbar-nav ml-auto">
        
         <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
+            <a class="nav-link" href="#" th:text="#{home.inicio}">Home</a> <!-- texto -->
         </li>
         
          <li class="nav-item">
-          <a class="nav-link" href="#">Articulos</a>
+             <a class="nav-link" href="#" th:text="#{home.articulo}">Articles</a> <!-- texto -->
         </li>
         
          <li class="nav-item">
-          <a class="nav-link" href="#">Suplementos</a>
+             <a class="nav-link" href="#" th:text="#{home.suplementos}">Supplements</a> <!-- texto -->
         </li>
         
          <li class="nav-item">
-          <a class="nav-link" href="#">Sobre Nosotros</a>
+             <a class="nav-link" href="#" th:text="#{home.abu}">About us</a> <!-- texto -->
         </li>
         
          <li class="nav-item">
-          <a class="nav-link" href="#">Contáctenos</a>
+             <a class="nav-link" href="#" th:text="#{home.contactenos}">Contact us</a> <!-- texto -->
         </li>
         
        <li class="nav-item">
@@ -75,11 +75,11 @@ SEBASTIAN PACAS-->
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden" th:text="#{home.previous}">Previous</span> <!-- texto -->
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden" th:text="#{home.next}">Next</span> <!-- texto -->
         
       </button>
         
@@ -100,16 +100,16 @@ SEBASTIAN PACAS-->
   <div class="container mt-5">
     <div class="row align-items-start  bg-light">
       <div class="col">
-        <h2>Change your lifestyle</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-           Lorem Ipsum has been the industry's standard dummy text ever since 
-           the 1500s, when an unknown printer took a galley of type and 
-           scrambled it to make a type specimen book. It has survived not only 
-           five centuries, but also the leap into electronic typesetting, 
-           remaining essentially unchanged. It was popularised in the 1960s 
-           with the release of Letraset sheets containing Lorem Ipsum passages,
+          <h2 th:text="#{home.text_life}">Change your lifestyle</h2> <!-- Texto -->
+            <p th:text="#{home.text_life_info}">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since 
+            the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book. It has survived not only 
+            five centuries, but also the leap into electronic typesetting, 
+            remaining essentially unchanged. It was popularised in the 1960s 
+            with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus 
-            PageMaker including versions of Lorem Ipsum.</p>
+            PageMaker including versions of Lorem Ipsum.</p> <!-- Texto -->
       </div>
       <div class="col">
         <img src="../static/images/recurso4.png" class="card-img-top" alt="...">
@@ -121,17 +121,17 @@ SEBASTIAN PACAS-->
     <div class="container mt-5">
       <h2 class="mt-5 mb-3"
           style="font-size: 30px;
-          color:#65C8D6"
-      >VEDA will help you to achive your goals</h2>
+          color:#65C8D6" th:text="#{home.help_text}"
+          >VEDA will help you to achive your goals</h2> <!-- texto -->
       <div class="row align-items-start ">
         <div class="col">
           <div class="card" style="width: 18rem;">
             <img src="../static/images/recurso2-01.png" class="card-img-top" alt="...">
           
             <div class="card-body">
-              <h5 class="card-title">Machines</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">More info</a>
+                <h5 class="card-title" th:text="#{home.machines}">Machines</h5> <!-- Texto -->
+                <p class="card-text" th:text="#{home.machines_text}">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <!-- Texto -->
+              <a href="#" class="btn btn-primary" th:text="#{home.more_info}">More info</a> <!-- Texto -->
             </div>
           </div>
         </div>
@@ -140,9 +140,9 @@ SEBASTIAN PACAS-->
             <img src="../static/images/recurso1-01.png" class="card-img-top" alt="...">
           
             <div class="card-body">
-              <h5 class="card-title">Props</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">More info</a>
+                <h5 class="card-title" th:text="#{home.props}">Props</h5> <!-- Texto -->
+                <p class="card-text" th:text="#{home.props_text}">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <!-- Texto -->
+              <a href="#" class="btn btn-primary" th:text="#{home.more_info}" >More info</a> <!-- Texto -->   
             </div>
           </div>
         </div>
@@ -151,9 +151,9 @@ SEBASTIAN PACAS-->
             <img src="../static/images/recurso3-01.png" class="card-img-top" alt="...">
           
             <div class="card-body">
-              <h5 class="card-title">Supplements</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">More info</a>
+                <h5 class="card-title" th:text="#{home.supplements}">Supplements</h5> <!-- Texto -->
+                <p class="card-text" th:text="#{home.supplements_text}">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <!-- Texto -->
+                <a href="#" class="btn btn-primary" th:text="#{home.more_info}">More info</a> <!-- Texto -->
             </div>
           </div>
         </div>

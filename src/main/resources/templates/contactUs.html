@@ -16,16 +16,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             <div class="formulario"> 
                 
-                <h1>Contactanos</h1>
-                <h1>Ahora mismo, no esperes mas!</h1>
-                <p>Envianos tu informacion, enceguida recibiras respuesta
-                    por parte de nuestro colaboradores y con gusto atenderan tus dudas</p>
+                <h1 th:text="#{cu.contactUs}">Contact us</h1>
+                <h1 th:text="#{cu.contactUs_rn}">Right now, don't wait any longer!</h1>
+                <p th:text="#{cu.contactUs_rn_text}">Send us your information, you will receive an answer immediately 
+                    by our collaborators and they will gladly answer your questions</p>
 
 
             <form action="submeter-formulario.php" method="post">       
 
                 <p>
-                    <label for="name" class="digite_nom">Nombre completo
+                    <label for="name" class="digite_nom" th:text="#{cu.contactUs_name}">complete name
                         <span class="Obligatorio">*</span>
                     </label>
                     <input type="text" name="digite_nom" id="nombre" required="Obligatorio" placeholder="Escriba su nombre completo">
