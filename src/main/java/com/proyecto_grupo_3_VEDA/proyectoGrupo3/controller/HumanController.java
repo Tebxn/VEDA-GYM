@@ -34,16 +34,16 @@ public class HumanController {
     @PostMapping("/saveAccount")
     public String saveUser(@ModelAttribute Human user){
         userService.saveHuman(user);
-        return "redirect:/supplierList"; //cambiar esto
+        return "redirect:/supplierList";
     }
     
-    @GetMapping("/deleteUser/{id}") //ARREGLAR
+    @GetMapping("/deleteUser/{id}")
    public String deleteUser(@PathVariable("id") Long idUser){
        userService.deleteHuman(idUser);
        return "redirect:/userList";
    }
    
-   @GetMapping("/returnHome")
+   @GetMapping("/home")
     public String returnHome(){
         return "home";
     }
@@ -52,5 +52,27 @@ public class HumanController {
     public String viewProducts(){
         return "products";
     }
-
+    
+    @GetMapping("/machines")    
+    public String viewMachines(){
+        return "maquinas";
+    }
+    
+    @GetMapping("/props")    
+    public String viewProps(){
+        return "articulos";
+    }
+    
+    @GetMapping("/contactUs")    
+    public String viewContactUs(){
+        return "contactUs";
+    }
+    @GetMapping("/aboutUs")    
+    public String viewAboutUs(){
+        return "aboutUs";
+    }
+    @GetMapping("/legal")    
+    public String viewTermsAndConditions(){
+        return "termsAndConditions";
+    }
 }
