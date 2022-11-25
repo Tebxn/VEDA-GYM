@@ -75,4 +75,9 @@ public class HumanController {
     public String viewTermsAndConditions(){
         return "termsAndConditions";
     }
+    
+    @GetMapping("/management")    
+    public String viewManagement(){
+        return "management";
+    }
 }

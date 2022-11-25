@@ -47,10 +47,10 @@
                   <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}" th:text="#{home.abu}">About Us</a> <!-- Texto de home -->
               </li>
               <li sec:authorize="hasRole('ROLE_CUSTOMER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{/returnHome}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
+                  <a class="nav link active" href="#" th:href="@{/home}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
               </li>
               <li sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{~/management/index}" th:text="#{template.managment}">Management</a> <!-- Texto -->
+                  <a class="nav link active" href="#" th:href="@{/management}" th:text="#{template.managment}">Management</a> <!-- Texto -->
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@
     <div id="emailHelp" class="form-text" th:text="#{template.int_name}">Add your full name</div> <!-- Texto -->
   </div>
   <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label" th:text="#{template.int_age}">Enter your age</label <!-- Texto -->
+      <label for="exampleInputPassword1" class="form-label" th:text="#{template.int_age}">Enter your age</label> <!-- Texto -->
     <input type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3 form-check">
@@ -187,11 +187,7 @@
                 <a href="#!" th:href="@{/contactUs}" class="text-white" th:text="#{template.help}">Help</a> <!-- Texto -->
               </p>
               <p>
-<<<<<<< HEAD
-<a href="#!" class="text-white" th:text="#{template.t_and_c}">Terms and Conditions</a> <!-- aqui se colocaran los terminos yh condicciones  --> <!-- texto -->
-=======
-<a href="#!" th:href="@{/legal}" class="text-white" th:text="#{template.t_and_c}">terms and conditions</a> <!-- aqui se colocaran los terminos yh condicciones  --> <!-- texto -->
->>>>>>> fc71d9f28758c350104fa4a65d6379dd9e5797ad
+            <a href="#!" class="text-white" th:text="#{template.t_and_c}">Terms and Conditions</a>
               </p>
             </div>
             <!-- Grid column -->
