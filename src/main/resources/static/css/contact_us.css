@@ -10,8 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 body{
   height: 100%; 
   font-family: 'Noto Sans', sans-serif;
-  background-color: #7c4dff;
-
+  background-color: #65C8D6;
 }
 .formulario{  
   width: 370px; 
@@ -65,7 +64,7 @@ button{
   margin-top: 10px;   
   text-transform: uppercase;
   background-color: #0e0e0e;
-  border-color: #fff;
+  border-color: #0e0e0e;
   border-style: solid; 
   border-radius: 50px;  
   width: 500px;   
