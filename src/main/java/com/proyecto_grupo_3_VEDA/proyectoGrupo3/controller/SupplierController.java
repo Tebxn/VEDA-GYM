@@ -1,5 +1,6 @@
 package com.proyecto_grupo_3_VEDA.proyectoGrupo3.controller;
 
+import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.Product;
 import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.Supplier;
 import com.proyecto_grupo_3_VEDA.proyectoGrupo3.service.ISupplierService;
 import java.util.List;
@@ -43,11 +44,11 @@ public class SupplierController {
        return "redirect:/supplierList";
    }
    
-//   @GetMapping("/editSupplier/{id}")
-//   public String editarPersona(@PathVariable("id") Long idPersona, Model model){
-//       Persona persona = personaService.getPersonaById(idPersona);
-//       List<Pais> listaPaises = paisService.listCountry();
-//       model.addAttribute("persona", persona);
-//       model.addAttribute("paises", listaPaises);
-//       return "crear";                                           FALTA
+    @GetMapping("/editSupplier/{id}")
+    public String editProduct(@PathVariable("id") Long idSupplier, Model model){
+        Supplier supplier = supplierService.getSupplierById(idSupplier);
+        List<Supplier> supplierList = supplierService.getAllSupplier();
+        model.addAttribute("supplier", supplier);
+    return "addSupplier";
+    }
 }

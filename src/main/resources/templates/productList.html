@@ -9,7 +9,7 @@
     <body>
         <header th:replace="plantilla/template::header"></header>
         
-        <h1 th:text="${titulo}" th:text="#{productlist.tit}"></h1>
+        <h1 th:text="#{productlist.tit}"></h1>
         
         <br>
         
@@ -34,6 +34,7 @@
                     <td th:text="${user.getProducto_descripcion}"></td>
                     <td th:text="${user.getProveedor.getProveedor_nombre}"></td>
                     <td th:text="${user.getTipo_producto}"></td>
+                    <td th:text="${user.getExistencia}"></td>
                     <td th:text="${user.getPrecio_compra}"></td>
                     <td th:text="${user.getPrecio_venta}"></td>
                     <td th:text="${user.getFecha_compra}"></td>
@@ -48,7 +49,8 @@
                 </tr>
             </th:block>
         </tbody>
-    </table>
+      </table>
+        <p><a th:href="@{/addProduct}" th:text="#{productlist.add}">Add Product</a></p>
 
 </body>
 <footer th:replace="plantilla/template::footer"></footer>  

@@ -11,7 +11,7 @@
         <br> 
     </p>
     
-    <h1 th:text="${titleSupplier}" th:text="#{supplierlist.tit}"></h1> <!-- Texto -->
+    <h1 th:text="#{supplierlist.tit}"></h1> <!-- Texto -->
     <h3 th:text="#{supplierlist.sub_tit}">Area administrativa</h3> <!-- Texto -->
     
     <table class="table table-striped">
@@ -45,7 +45,7 @@
       </th:block>
   </tbody>
 </table>
-    <p><a th:href="@{/addSupplier}" th:text="#{supplierlist.add}">Add Provider</a></p> <!-- Texto -->
+    <p><a th:href="@{/addSupplier}" th:text="#{supplierlist.add}">Add Supplier</a></p> <!-- Texto -->
     
     
 <footer th:replace="plantilla/template::footer"></footer>

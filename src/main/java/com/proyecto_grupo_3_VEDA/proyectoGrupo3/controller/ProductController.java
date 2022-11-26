@@ -33,10 +33,10 @@ public class ProductController {
     }
     
     @GetMapping("/addProduct")
-    public String crearPersona(Model model){
+    public String createProduct(Model model){
         List<Supplier> supplierList = supplierService.getAllSupplier();
         model.addAttribute("product", new Product());
-        model.addAttribute("supplier", supplierList);
+        model.addAttribute("suppliers", supplierList);
         return "addProduct";
     }
     
@@ -52,12 +52,12 @@ public class ProductController {
         Product product = productService.getProductById(idProduct);
         List<Supplier> supplierList = supplierService.getAllSupplier();
         model.addAttribute("product", product);
-        model.addAttribute("supplier", supplierList);
+        model.addAttribute("suppliers", supplierList);
         return "addProduct";
     
     }
     
-    @GetMapping("/delete/{id}")
+    @GetMapping("/deleteProduct/{id}")
     
     public String deleteProduct(@PathVariable("id")Long idProduct){
         productService.deleteProduct(idProduct);

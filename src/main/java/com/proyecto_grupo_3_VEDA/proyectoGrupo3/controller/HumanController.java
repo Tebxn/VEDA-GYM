@@ -25,10 +25,10 @@ public class HumanController {
         return "userList";
     }
     
-    @GetMapping("/createAccount")
+    @GetMapping("/addUser")
     public String createUser(Model model){
         model.addAttribute("user", new Human());
-        return "createAccount";
+        return "addUser";
     }
     
     @PostMapping("/saveAccount")
