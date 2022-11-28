@@ -1,15 +1,69 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+
+<!--Aqui se muestra un menu para acceder a la visualizacion de las tablas administrativas y la posibilidad de guardar un nuevo usuario-->
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
-        <title>TODO supply a title</title>
+        <title>VEDA GYMS Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:replace="./plantilla/template::header"></header>
+        
+        <br><br>
+        <h2>Area Administrativa VEDA GYM Supplies</h2>
+        
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+            <div class="col">
+              <div class="card">
+                <img src="images/managementSuppliers.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Administrar Proveedores</h5>
+                  <p class="card-text">En esta seccion puede inscribir, eliminar o editar probedores.</p>
+                  <a href="#" class="btn btn-primary" th:href="@{/supplierList}">Acceder</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="card">
+                <img src="images/managementUsers.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Administrar Usuarios</h5>
+                  <p class="card-text">Aqui puede agregar, elimiar o editar usuarios ya sea administrativos o clientes.</p>
+                  <a href="#" class="btn btn-primary" th:href="@{/userList}">Acceder</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="card">
+                <img src="images/managementProducts.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Administrar Productos</h5>
+                  <p class="card-text">En esta seccion puede Agregar, eliminar y editar los productos.</p>
+                  <a href="#" class="btn btn-primary" th:href="@{/productList}">Acceder</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="card">
+                <img src="images/managementInvoice.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Administrar Facturas</h5>
+                  <p class="card-text">Seccion de administracion de facturas para ver, editar y borrar.</p>
+                  <a href="#" class="btn btn-primary">Acceder</a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+       
+        
+        <footer th:replace="./plantilla/template::footer"></footer>
     </body>
 </html>

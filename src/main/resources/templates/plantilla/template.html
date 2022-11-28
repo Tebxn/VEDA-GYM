@@ -17,7 +17,7 @@
   <header th:fragment="header">
         <nav class="navbar navbar-expand-lg" style="background-color: #65C8D6;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" th:href="@{/home}">
             <img src="./images/logo-nav-veda-01.svg" alt="Logo" width="80" height="38" class="d-inline-block align-text-center">
             Gym Supplies
           </a>
@@ -34,7 +34,7 @@
                   <a class="nav-link active" aria-current="page" href="#" th:href="@{/products}" th:text="#{home.suplementos}">Supplements</a> <!-- Texto de home-->
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/props}" th:text="#{templates.props}">Props</a> <!-- Texto -->
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/props}" th:text="#{home.props}">Props</a> <!-- Texto -->
                 
               </li>
               <li class="nav-item">
@@ -46,11 +46,11 @@
               <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}" th:text="#{home.abu}">About Us</a> <!-- Texto de home -->
               </li>
-              <li sec:authorize="hasRole('ROLE_CUSTOMER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{/home}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
+              <li  class="nav-item" sec:authorize="hasRole('ROLE_CUSTOMER')">
+                  <a class="nav link active" aria-current="page" href="#" th:href="@{/home}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
               </li>
-              <li sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" class="nav-item">
-                  <a class="nav link active" href="#" th:href="@{/management}" th:text="#{template.managment}">Management</a> <!-- Texto -->
+              <li class="nav-item" sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" >
+                  <a class="nav link active" aria-current="page" href="#" th:href="@{/management}" th:text="#{template.management}">Management</a> <!-- Texto -->
               </li>
             </ul>
           </div>
