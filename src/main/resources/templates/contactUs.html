@@ -1,59 +1,112 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Contact us Section </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/contact_us.css"/>
-    </head>
-    <body>
-        <div class="contact-us"> 
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+  	<title>Contact Form 03</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <div class="formulario">      
-                <h1>CONTÁCTENOS</h1>
-                <h1>HOY MISMO!</h1>
-                <p>Envianos tu informacion y pronto recibira respuesta
-                    por parte de nuestro colaboradoes</p>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="productos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+	</head>
+        <header th:replace="./plantilla/template::header"></header>
+        
+        <body>
+        <section class="mb-4">
 
-            <form action="submeter-formulario.php" method="post">       
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5">Si tienes alguna duda contacta con nuestro equipo de soporte, te ayudaran en unas horas.</p>
 
-                <p>
-                    <label for="name" class="digite_nom">Nombre
-                        <span class="Obligatorio">*</span>
-                    </label>
-                    <input type="text" name="digite_nom" id="nombre" required="Obligatorio" placeholder="Escriba su nombre completo">
-                </p>
+            <div class="row">
 
-                <p>
-                    <label for="email" class="digite_email">Correo
-                        <span class="Obligatorio">*</span>
-                    </label>
-                    <input type="email" name="introducir_email" id="email" required="Obligatorio" placeholder="Escriba su email">
-                </p>
+                <!--Grid column-->
+                <div class="col-md-9 ml-5 mb-md-0 mb-4">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
-                <p>
-                    <label for="phone" class="digite_num">Telefono
+                        <!--Grid row-->
+                        <div class="row">
 
-                    </label>
-                    <input type="" name="introducir_telefono" id="telefono" placeholder="Digite su numero telefonico">
-                </p>    
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-1">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="">Nombre</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
 
-                <p>
-                    <label for="mensaje" class="colocar_menssag">Mensaje
-                        <span class="Obligatorio">*</span>
-                    </label>                     
-                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="Obligatorio" placeholder="Deja aquí su mensaje..."></textarea> 
-                </p>                    
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="">Tu Email</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
 
-                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar formulario</p></button>
+                        </div>
+                        <!--Grid row-->
 
-                <p class="aviso">
-                    <span class="obligatorio"> * </span> Campos obligatorios.
-                </p>          
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" class="">Titulo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
 
-            </form>
-        </div>  
+                        <!--Grid row-->
+                        <div class="row">
 
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                    <label for="message">Tu mensaje</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                    </form>
+
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
+                    </div>
+                    <div class="status"></div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-2 text-center">
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p>San Jose, Avenida 1, Costa Rica</p>
+                        </li>
+
+                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                            <p>+506 7178 8696</p>
+                        </li>
+
+                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                            <p>contact@vedagyms.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+            </div>
+
+        </section>
+            <footer th:replace="./plantilla/template::footer"></footer>
     </body>
 </html>
