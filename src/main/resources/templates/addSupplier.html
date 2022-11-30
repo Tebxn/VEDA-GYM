@@ -24,31 +24,31 @@
                         <div class="form-group mb-3 row">
                             <label  class="col-md-2 col-form-label" for="nombre">Codigo del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control form-control-sm col-md-6" th:field="*{c_proveedor}"  placeholder= "Codigo del proveedor" id="c_proveedor" aria-describedby="emailHelp">
+                                <input type="text" required="required" class="form-control form-control-sm col-md-6" th:field="*{c_proveedor}"  placeholder= "Codigo del proveedor" id="c_proveedor" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
                             <label  class="form-control-sm col-md-2  col-form-label" for="apellido1">Nombre del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{proveedor_nombre}" class="form-control form-control-sm col-md-6" placeholder= "Nombre del proveedor" id="proveedor_nombre" aria-describedby="emailHelp">
+                                <input type="text" required="required" th:field="*{proveedor_nombre}" class="form-control form-control-sm col-md-6" placeholder= "Nombre del proveedor" id="proveedor_nombre" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
                             <label  class="form-control-sm col-form-label col-md-2" for="apellido2">Cedula Juridica</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{cedula_juridica}" class="form-control form-control-sm col-md-6" placeholder= "Cedula juridica correspondiente" id="cedula_juridica" aria-describedby="emailHelp">
+                                <input type="text" required="required" pattern="[0-9]{10}" th:field="*{cedula_juridica}" class="form-control form-control-sm col-md-6" placeholder= "Cedula juridica correspondiente (10 Digitos)" id="cedula_juridica" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
                             <label  class="form-control-sm col-form-label col-md-2" for="telefono">Email del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{proveedor_email}" class="form-control form-control-sm col-md-6" placeholder= "Correo Electronico del proveedor" id="proveedor_email" aria-describedby="emailHelp">
+                                <input type="email" required="required" th:field="*{proveedor_email}" class="form-control form-control-sm col-md-6" placeholder= "Correo Electronico del proveedor" id="proveedor_email" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
                             <label  class="form-control-sm  col-form-label col-md-2" for="email">Telefono del proveedor</label>
                             <div class="col-sm-10">
-                                <input type="text" th:field="*{proveedor_telefono}" class="form-control form-control-sm col-md-6" placeholder= "Telefono del proveedor" id="proveedor_telefono" aria-describedby="emailHelp">
+                                <input type="text" required="required" pattern="[0-9]{8}" th:field="*{proveedor_telefono}" class="form-control form-control-sm col-md-6" placeholder= "Telefono del proveedor (8 Digitos)" id="proveedor_telefono" aria-describedby="emailHelp">
                             </div>
                         </div>
                         

@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -29,6 +31,7 @@ public class Human implements Serializable{
     private String permissions = "";
     private String roles = "";
     private int active;
+  
 
     public long getId() {
         return id;
@@ -125,7 +128,6 @@ public class Human implements Serializable{
     public void setActive(int active) {
         this.active = active;
     }
-
     
 //    Metodos para autenticacion y seguridad
             
