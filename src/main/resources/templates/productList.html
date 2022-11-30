@@ -17,6 +17,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col" th:text="#{productlist.code}">Code</th>
+                    <th scope="col" th:text="#{productlist.name}">Title</th>
                     <th scope="col" th:text="#{productlist.desc}">Description</th>
                     <th scope="col" th:text="#{productlist.prov}">Supplier</th>
                     <th scope="col" th:text="#{productlist.tipe}">Type</th>
@@ -31,6 +32,7 @@
             <th:block th:each="user: ${products}">
                 <tr>
                     <td th:text="${user.getC_producto}"></td>
+                    <td th:text="${user.getProducto_titulo}"></td>
                     <td th:text="${user.getProducto_descripcion}"></td>
                     <td th:text="${user.getProveedor.getProveedor_nombre}"></td>
                     <td th:text="${user.getTipo_producto}"></td>

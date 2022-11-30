@@ -18,6 +18,7 @@ public class Product implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
     private String c_producto;
+    private String producto_titulo;
     private String producto_descripcion;
     private String tipo_producto;
     private float existencia;
@@ -46,6 +47,14 @@ public class Product implements Serializable{
         this.c_producto = c_producto;
     }
 
+    public String getProducto_titulo() {
+        return producto_titulo;
+    }
+
+    public void setProducto_titulo(String producto_titulo) {
+        this.producto_titulo = producto_titulo;
+    }
+    
     public String getProducto_descripcion() {
         return producto_descripcion;
     }

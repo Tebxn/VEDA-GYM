@@ -27,6 +27,12 @@
                             </div>
                         </div>
                         <div class="form-group mb-3 row">
+                            <label  class="form-control-sm col-md-2  col-form-label" for="producto_titulo">Titulo Producto</label>
+                            <div class="col-sm-10">
+                                <input type="text" th:field="*{producto_titulo}" required="required" class="form-control form-control-sm col-md-6" placeholder= "Titulo del producto" id="producto_titulo" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3 row">
                             <label  class="form-control-sm col-md-2  col-form-label" for="producto_descripcion">Descripcion</label>
                             <div class="col-sm-10">
                                 <input type="text" th:field="*{producto_descripcion}" required="required" class="form-control form-control-sm col-md-6" placeholder= "Descripcion del producto" id="producto_descripcion" aria-describedby="emailHelp">
