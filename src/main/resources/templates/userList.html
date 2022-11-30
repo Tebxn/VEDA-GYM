@@ -43,7 +43,7 @@
            <td th:text="${user.getRoles}"></td>
            <td th:text="${user.getActive}"></td>
            <td>
-               <a th:href="@{/editSupplier/{id}(id=${user.getId})}" th:text="#{human.edit}">Edit</a> <!--falta--> <!-- Texto -->
+               <a th:href="@{/editUser/{id}(id=${user.getId})}" th:text="#{human.edit}">Edit</a> <!--falta--> <!-- Texto -->
            </td>
            <td>
                <a th:href="@{/deleteUser/{id}(id=${user.getId})}" th:text="#{human.delete}">Delete</a> <!--falta--> <!-- Texto -->

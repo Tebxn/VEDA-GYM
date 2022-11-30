@@ -1,6 +1,7 @@
 package com.proyecto_grupo_3_VEDA.proyectoGrupo3.controller;
 
 import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.Human;
+import com.proyecto_grupo_3_VEDA.proyectoGrupo3.entity.Supplier;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,9 +33,17 @@ public class HumanController {
     }
     
     @PostMapping("/saveAccount")
-    public String saveUser(@ModelAttribute Human user){
-        userService.saveHuman(user);
-        return "redirect:/supplierList";
+    public String saveUser(@ModelAttribute Human human){
+        userService.saveHuman(human);
+        return "redirect:/userList";
+    }
+    
+    @GetMapping("/editUser/{id}")
+    public String editUser(@PathVariable("id") Long idHuman, Model model){
+        Human human = userService.getHumanById(idHuman);
+        List<Human> userList = userService.getAllHuman();
+        model.addAttribute("user", human);
+    return "addUser";
     }
     
     @GetMapping("/deleteUser/{id}")

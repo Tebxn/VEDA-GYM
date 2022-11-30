@@ -9,7 +9,7 @@
     <body>
         <header th:replace="plantilla/template::header"></header>
         
-        <h1 th:text="#{productlist.tit}"></h1>
+        <h1 th:text="#{productlist.tit}">Product List</h1>
         
         <br>
         
@@ -18,7 +18,7 @@
                 <tr>
                     <th scope="col" th:text="#{productlist.code}">Code</th>
                     <th scope="col" th:text="#{productlist.desc}">Description</th>
-                    <th scope="col" th:text="#{productlist.prov}">Supplier</th>
+<!--                    <th scope="col" th:text="#{productlist.prov}">Supplier</th>-->
                     <th scope="col" th:text="#{productlist.tipe}">Type</th>
                     <th scope="col" th:text="#{productlist.ex}">Stock</th>
                     <th scope="col" th:text="#{productlist.pp}">Purchase Price</th>
@@ -32,7 +32,7 @@
                 <tr>
                     <td th:text="${user.getC_producto}"></td>
                     <td th:text="${user.getProducto_descripcion}"></td>
-                    <td th:text="${user.getProveedor.getProveedor_nombre}"></td>
+<!--                    <td th:text="${user.getProveedor.getProveedor_nombre}"></td>-->
                     <td th:text="${user.getTipo_producto}"></td>
                     <td th:text="${user.getExistencia}"></td>
                     <td th:text="${user.getPrecio_compra}"></td>
