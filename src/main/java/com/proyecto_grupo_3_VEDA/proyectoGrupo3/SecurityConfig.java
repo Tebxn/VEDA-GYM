@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -52,20 +53,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         auth.authenticationProvider(authenticationProvider());
     }
     
-    //metodo para hacer la autenticacion de usuario
+    String[] anyUserUrl = {"/js/**", "/css/**", "/images/**", "/home"};
+    
+    String[] adminUrl = {"/aboutUs","/addSupplier","/addUser","/contactUs","/login","/returnHome",
+                    "/inventory","/products","/supplierList","/termsAndConditions","/userList","/index",
+                    "/machines","/props","/productList","/manegement"};
+    
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
     http.authorizeRequests()
-            .antMatchers("/aboutUs","/addSupplier","/addUser","/contactUs","/home","/login","/returnHome",
-                    "/inventory","/products","/supplierList","/termsAndConditions","/userList","/index",
-                    "/machines","/props","/productList","/manegement")
+            .antMatchers("/home").permitAll() // This will be your home screen URL
+            .antMatchers(anyUserUrl)
+            .permitAll()
+            .antMatchers(adminUrl)
             .hasRole("ADMIN")
-            .antMatchers("/aboutUs","/contactUs","/home","/products","/termsAndConditions","/login","/index",
-                    "/machines","/props")
+            .antMatchers("/profile")
             .hasAnyRole("CUSTOMER","ADMIN")
             .anyRequest().authenticated()
             .and()
             .formLogin()
-            .loginPage("/login").permitAll().defaultSuccessUrl("/home",true);
+            .loginPage("/login").permitAll().defaultSuccessUrl("/home",true)
+            .and()
+            .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/home").permitAll();
     }
 }

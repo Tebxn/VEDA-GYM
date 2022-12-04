@@ -89,4 +89,9 @@ public class HumanController {
     public String viewManagement(){
         return "management";
     }
+    
+    @GetMapping("/profile")    
+    public String viewProfile(){
+        return "profile";
+    }
 }
