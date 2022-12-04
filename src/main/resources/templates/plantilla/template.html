@@ -47,13 +47,19 @@
                   <a class="nav-link active" aria-current="page" href="#" th:href="@{/aboutUs}" th:text="#{home.abu}">About Us</a> <!-- Texto de home -->
               </li>
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/logout}">logout</a> <!-- Texto de home -->
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/signup}">Sign Up</a> <!-- Texto de home -->
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#" th:href="@{/login}">Log In</a> <!-- Texto de home -->
               </li>
               <li  class="nav-item" sec:authorize="hasRole('ROLE_CUSTOMER')">
-                  <a class="nav link active" aria-current="page" href="#" th:href="@{/home}" th:text="#{template.customer}">Customer</a>  <!-- Texto -->
+                  <a class="nav link active" aria-current="page" href="#" th:href="@{/profile}" th:text="#{template.customer}">Perfil</a>  <!-- Texto -->
               </li>
-              <li class="nav-item" sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_MANAGER')" >
+              <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')" >
                   <a class="nav link active" aria-current="page" href="#" th:href="@{/management}" th:text="#{template.management}">Management</a> <!-- Texto -->
+              </li>
+              <li class="nav-item" sec:authorize="hasAnyRole('ROLE_ADMIN','ROLE_CUSTOMER')" >
+                  <a class="nav link active" aria-current="page" href="#" th:href="@{/logout}">Log Out</a> <!-- Texto -->
               </li>
             </ul>
           </div>

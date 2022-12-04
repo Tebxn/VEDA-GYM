@@ -53,7 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         auth.authenticationProvider(authenticationProvider());
     }
     
-    String[] anyUserUrl = {"/js/**", "/css/**", "/images/**", "/home"};
+    String[] anyUserUrl = {"/js/**", "/css/**", "/images/**", "/home", "/signIn"};
     
     String[] adminUrl = {"/aboutUs","/addSupplier","/addUser","/contactUs","/login","/returnHome",
                     "/inventory","/products","/supplierList","/termsAndConditions","/userList","/index",

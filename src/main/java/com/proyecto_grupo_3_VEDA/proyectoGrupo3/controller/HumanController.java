@@ -94,4 +94,8 @@ public class HumanController {
     public String viewProfile(){
         return "profile";
     }
+    @GetMapping("/signIn")    
+    public String viewSignIn(){
+        return "signIn";
+    }
 }
