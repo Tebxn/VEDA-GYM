@@ -30,7 +30,7 @@ and open the template in the editor.
             </div>
             <div class="row mx-auto container-fluid">
                 <div class="product text-center col-lg-3 col-md4 col-12">
-                    <img class="img-fluid mb-3" src="images/proteina.jpg" alt="">
+                    <img class="img-fluid mb-3" src="{product.getImage}" alt="">
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -38,9 +38,9 @@ and open the template in the editor.
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h5 class="p-name" th:text="#{products.prd_p}">Protein</h5> <!-- Texto -->
-                    <p th:text="#{products.p_text}">WHEY brand protein 780g</p> <!-- Texto -->
-                    <h4 class="p-price">$96.00</h4>
+                    <h5 class="p-name" th:text="#{product.getProducto_titulo}">Protein</h5> <!-- Texto -->
+                    <p th:text="#{product.getProducto_descripcion}">WHEY brand protein 780g</p> <!-- Texto -->
+                    <h4 class="p-price" th:text="{product.getPrecio_venta}">$96.00</h4>
                     <button class="buy-btn" th:text="#{maquinas.p_compra}">Buy</button> <!-- Texto de maquinas -->
                 </div>
                 <div class="product text-center col-lg-3 col-md4 col-12">

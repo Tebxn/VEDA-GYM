@@ -26,6 +26,7 @@ public class Product implements Serializable{
     private float precio_compra;
     private String fecha_venta;
     private String fecha_compra;
+    private byte image;
 
     @ManyToOne
     @JoinColumn(name = "proveedor")
@@ -118,6 +119,15 @@ public class Product implements Serializable{
     public void setProveedor(Supplier proveedor) {
         this.proveedor = proveedor;
     }
+
+    public byte getImage() {
+        return image;
+    }
+
+    public void setImage(byte image) {
+        this.image = image;
+    }
+    
     
     
 }
