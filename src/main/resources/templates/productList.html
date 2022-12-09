@@ -22,7 +22,7 @@
                     <th scope="col" th:text="#{productlist.prov}">Supplier</th>
                     <th scope="col" th:text="#{productlist.tipe}">Type</th>
                     <th scope="col" th:text="#{productlist.ex}">Stock</th>
-                    <th scope="col" th:text="#{productlist.pp}">Purchase Price</th>
+                    <th scope="col" th:text="#{productlist.inv}">Inventory</th>
                     <th scope="col" th:text="#{productlist.sp}">Sale price</th>
                     <th scope="col" th:text="#{productlist.pd}">Purchase Date</th>
                     <th scope="col" th:text="#{productlist.sd}">Sale date</th>
@@ -37,11 +37,8 @@
                     <td th:text="${user.getProveedor.getProveedor_nombre}"></td>
                     <td th:text="${user.getTipo_producto}"></td>
                     <td th:text="${user.getExistencia}"></td>
-                    <td th:text="${user.getPrecio_compra}"></td>
-                    <td th:text="${user.getPrecio_venta}"></td>
-                    <td th:text="${user.getFecha_compra}"></td>
-                    <td th:text="${user.getFecha_venta}"></td>
-
+                    <td th:text="${user.getInventario}"></td>
+                    <td th:text="${user.getPrecio}"></td>
                     <td>
                         <a th:href="@{/editProduct/{id}(id=${user.getId})}" th:text="#{productlist.edit}">Edit</a>
                     </td>

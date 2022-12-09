@@ -10,4 +10,12 @@ public class LoginController {
     public String index(){
         return "/login";
     }
+    @GetMapping("/profile")    
+    public String viewProfile(){
+        return "profile";
+    }
+    @GetMapping("/signIn")    
+    public String viewSignIn(){
+        return "signIn";
+    }
 }

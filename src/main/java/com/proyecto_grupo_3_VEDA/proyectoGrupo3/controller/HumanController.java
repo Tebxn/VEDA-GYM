@@ -51,51 +51,9 @@ public class HumanController {
        userService.deleteHuman(idUser);
        return "redirect:/userList";
    }
-   
-   @GetMapping("/home")
-    public String returnHome(){
-        return "home";
-    }
-    
-    @GetMapping("/products")    
-    public String viewProducts(){
-        return "products";
-    }
-    
-    @GetMapping("/machines")    
-    public String viewMachines(){
-        return "maquinas";
-    }
-    
-    @GetMapping("/props")    
-    public String viewProps(){
-        return "articulos";
-    }
-    
-    @GetMapping("/contactUs")    
-    public String viewContactUs(){
-        return "contactUs";
-    }
-    @GetMapping("/aboutUs")    
-    public String viewAboutUs(){
-        return "aboutUs";
-    }
-    @GetMapping("/legal")    
-    public String viewTermsAndConditions(){
-        return "termsAndConditions";
-    }
     
     @GetMapping("/management")    
     public String viewManagement(){
         return "management";
-    }
-    
-    @GetMapping("/profile")    
-    public String viewProfile(){
-        return "profile";
-    }
-    @GetMapping("/signIn")    
-    public String viewSignIn(){
-        return "signIn";
     }
 }
