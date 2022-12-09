@@ -25,17 +25,6 @@ public class ViewController {
         model.addAttribute("products", productList); //sustituye personas por la lista de personas
         return "products";
     }
-    
-    @GetMapping("/machines")    
-    public String viewMachines(){
-        return "maquinas";
-    }
-    
-    @GetMapping("/props")    
-    public String viewProps(){
-        return "articulos";
-    }
-    
     @GetMapping("/contactUs")    
     public String viewContactUs(){
         return "contactUs";

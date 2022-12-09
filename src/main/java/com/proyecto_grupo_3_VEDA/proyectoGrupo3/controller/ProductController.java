@@ -23,7 +23,6 @@ public class ProductController {
     private ISupplierService supplierService;
     
     @GetMapping("/productList")
-    
     public String index(Model model){
         List<Product> productList = productService.getAllProduct();
         model.addAttribute("titulo", "Products");//sustituye titulo por la tabla personas, model pasa la info al frond end

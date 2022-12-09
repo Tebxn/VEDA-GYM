@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>Error 404 here</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http="X-UA-Compatible" content="ie-edge">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://thymeleaft.org/extras/spring-security"
+      lang="en">
+    
+    <head th:replace="./plantilla/template::head"></head>
     
     <body>
         <section class="error-menssage">
