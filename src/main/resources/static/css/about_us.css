@@ -1,83 +1,167 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 12 nov. 2022, 14:34:00
-    Author     : derec
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
 *{
-    padding: 0;
-    margin: 0;
-    font-family: 'Veda-GYM', sans-serif;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-   
-}
-.about-us{
-    width: 110%;
-    padding: 110px;
-    background-color: #65C8D6;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
-.about img{
+.section{
+    width: 100%;
+}
+
+.section .container{
+   width: 80%;
+   display: block;
+   margin: 0px auto;
+   padding: 50px 0px;
+}
+
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #88941e;
+}
+
+.container .title h1::after{
+    content: "";
+    height: 5px;
+    width: 100px;
+    background-color: #c4d156;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+}
+
+.content{
+    float: left;
+    width: 55%;
+}
+
+.image-section{
+    float: right;
+    width: 40%;
+    
+}
+
+.image-section img{
+    width: 100%;
     height: auto;
-    width: 320px;
 }
 
-.about-text{
-    width: 500px;
+.content .article h3{
+    color: #a3a3a3;
+    font-size: 17px;
 }
 
-.fit{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;       
+.content .article p{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
 }
 
-.about-text h1{
-    color: #000000;
-    font-size: 50px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+.content .article .button{
+    margin-top: 50px;
 }
 
-.about-text h3{
-    color: darkblue;
-    font-size: 30px;
-    text-transform: capitalize;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-}
-
-.about-text h4{
+.content .article .button a{
+    text-decoration: none;
+    padding: 8px 25px;
+    background-color: #88941e;
+    border-radius: 40px;
     color: #fff;
-    font-size: 15px;
-    text-transform: none;
-    margin-bottom: 15px;
-    letter-spacing: 1px; 
+    font-size: 18px;
+    letter-spacing: 1.5px;
 }
 
-.about-text h2{
-    color: #97d848;
-    font-size: 15px;
-    text-transform: none;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+.content .article .button a:hover{
+    color: #fff;
+    background-color: #f28f92;
+    transition: 1s ease;
 }
 
-span{
-    color: #fff;
+.container .social{
+    width: 100%;
+    clear: both;
+    margin-top: 50px;
+    text-align: center;
+    display: inline-block;
 }
-span2{
-    color: #000000;
-}
-.about-text p{
+
+.container .social i{
     color: #fff;
-    letter-spacing: 1px;
-    line-height: 20px;
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    background-color: #f28f92;
+    margin: 0px;
+}
+
+.container .social i:hover{
+    color: #fff;
+    background-color: #88941e;
+    transition: 1s ease;
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    
+    .content{
+        float: none;
+        width:100%;
+        display: block;
+        margin: auto;
+    }
+    
+    .image-section{
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    
+    .container .title h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .container .article .button{
+        text-align: center;
+    }
+    
+    .container .article .button a{
+        padding: 6px 15px;
+        font-size: 16px;
+    }
+    
+    .container .social i{
+        font-size: 19px;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
 }
