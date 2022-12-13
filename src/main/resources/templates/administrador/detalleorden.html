@@ -34,9 +34,9 @@
       </h1>
 
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/administrador}">Home</a></li>
-        <li class="breadcrumb-item"><a th:href="@{/administrador/ordenes}">Ordenes</a></li>
-        <li class="breadcrumb-item active">Detalle de Compra</li>
+        <li class="breadcrumb-item"><a th:href="@{/administrador}" th:text="#{detall.home}">Home</a></li>
+        <li class="breadcrumb-item"><a th:href="@{/administrador/ordenes}" th:text="#{detall.orden}">Ordenes</a></li>
+        <li class="breadcrumb-item active" th:text="#{detall.dc}">Detalle de Compra</li>
       </ol>
 
       <!-- Blog Post -->
@@ -47,10 +47,10 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Producto</th>                  
-                  <th scope="col">Precio</th>
-                  <th scope="col">Total</th>                  
+                  <th scope="col" th:text="#{detall.cant}">Cantidad</th>
+                  <th scope="col" th:text="#{detall.prod}">Producto</th>                  
+                  <th scope="col" th:text="#{detall.prec}">Precio</th>
+                  <th scope="col" th:text="#{detall.tota}">Total</th>                  
                 </tr>
               </thead>
               <tbody>
