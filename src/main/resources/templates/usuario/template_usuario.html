@@ -16,7 +16,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" th:href="@{/getCart}">Carrito</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/getCart}" th:text="#{tempUS.carr}">Carrito</a></li>
 						<li class="nav-item"><a class="nav-link" th:href="@{/usuario/login}">Login</a></li>
 					</ul>
 				</div>
@@ -36,7 +36,7 @@
 				<input class="form-control mr-sm-2" type="search"
 					placeholder="Buscar" aria-label="Search" name="nombre"
 					autocomplete="off">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit" th:text="#{tempUS.busc}">Buscar</button>
 			</form>
 
 
@@ -54,9 +54,9 @@
 							
 							<div class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" th:href="@{/usuario/compras}">Compras</a>
-								<a class="dropdown-item" th:href="@{/getCart}">Carrito</a> 
-								<a class="dropdown-item" th:href="@{/usuario/cerrar}">Cerrar Sesion</a> 
+								<a class="dropdown-item" th:href="@{/usuario/compras}" th:text="#{tempUS.comp}">Compras</a>
+								<a class="dropdown-item" th:href="@{/getCart}" th:text="#{tempUS.carr}">Carrito</a> 
+								<a class="dropdown-item" th:href="@{/usuario/cerrar}" th:text="#{tempUS.cr}">Cerrar Sesion</a> 
 							</div></li>
 				</ul>
 			</div>

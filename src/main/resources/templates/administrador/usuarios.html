@@ -35,25 +35,25 @@
   </h1>
 
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a th:href="@{/administrador}">Home Admin</a></li>
-    <li class="breadcrumb-item active">Ver Usuarios</li>
+    <li class="breadcrumb-item"><a th:href="@{/administrador}" th:text="#{us.hadm}">Home Admin</a></li>
+    <li class="breadcrumb-item active" th:text="#{us.vu}">Ver Usuarios</li>
   </ol>
   <h2>Usuarios</h2>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Email</th>
-        <th scope="col">Telefono</th>
-        <th scope="col">Dirección</th>
+        <th scope="col" th:text="#{us.nomb}">Nombre</th>
+        <th scope="col" th:text="#{us.emai}">Email</th>
+        <th scope="col" th:text="#{us.tele}">Telefono</th>
+        <th scope="col" th:text="#{us.dire}">Dirección</th>
       </tr>
     </thead>
     <tbody>
       <tr th:each="usuario: ${usuarios}">
-        <td th:text="${usuario.nombre}">Nombre</td>
-        <td th:text="${usuario.email}">Email</td>
-        <td th:text="${usuario.telefono}">Telefono</td>
-        <td th:text="${usuario.direccion}">Dirección</td>
+        <td th:text="${usuario.nombre}" th:text="#{us.nomb}">Nombre</td>
+        <td th:text="${usuario.email}" th:text="#{us.emai}">Email</td>
+        <td th:text="${usuario.telefono}" th:text="#{us.tele}">Telefono</td>
+        <td th:text="${usuario.direccion}" th:text="#{us.dire}">Dirección</td>
       </tr>       
     </tbody>
   </table>

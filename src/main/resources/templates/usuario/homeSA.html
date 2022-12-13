@@ -33,8 +33,8 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3">Bienvenido a Tienda VEDA</h1>
-        <p class="lead">Equipo deportivo a tu alcance</p>
+        <h1 class="display-3" th:text="#{home.bienvenida}">Bienvenido a Tienda VEDA</h1>
+        <p class="lead" th:text="#{homeSA.desc}">Equipo deportivo a tu alcance</p>
       </header>
 
       <!-- Page Features -->
@@ -47,7 +47,7 @@
               <p class="card-text" th:text="${producto.nombre}"></p>
             </div>
             <div class="card-footer">
-              <a th:href="@{/productohomeSinAutenticar/{id} (id=${producto.id})}" class="btn btn-success">Ver producto</a>
+              <a th:href="@{/productohomeSinAutenticar/{id} (id=${producto.id})}" class="btn btn-success" th:text="#{home.general.vp}">Ver producto</a>
             </div>
           </div>
         </div>
