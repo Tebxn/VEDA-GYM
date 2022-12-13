@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+     <link href="css/estilos.css" rel="stylesheet" type="text/css">
+     <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+     <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
     </head>
     <body>
-        <div>Por favor registrese o loguearse para continuar</div>
+        <header class="jumbotron my-4">
+        <h1 class="display-3" th:text="#{home.bienvenidaOrder}">Registrate ahora mismo</h1>
+        <p class="lead"th:text="#{home.bienvenida.descripcionOrder}">No lo pienses mas, VEDA, tu mejor opcion</p>
+      </header>
     </body>
 </html>
