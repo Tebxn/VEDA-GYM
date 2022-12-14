@@ -45,7 +45,7 @@ public class HomeController {
     
     
     
-    List<DetalleOrden> detalles = new ArrayList<DetalleOrden>(); //para almacenar detalles de la orden
+    public List<DetalleOrden> detalles = new ArrayList<DetalleOrden>(); //para almacenar detalles de la orden
     
     Orden orden = new Orden();
     
