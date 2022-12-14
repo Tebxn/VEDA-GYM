@@ -32,13 +32,13 @@
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">
-        Spring eCommerce <small th:text="#{detcom.deta}">Detalles</small>
+        VEDA Detalles <small th:text="#{template.detalles}">Detalles</small>
       </h1>
 
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item"><a th:href="@{usuario/compras}" th:text="#{detcom.comp}">Compras</a></li>
-        <li class="breadcrumb-item active" th:text="#{detcom.detco}">Detalle de Compra</li>
+        <li class="breadcrumb-item"><a th:href="@{/}" th:text="#{detall.home}">Home</a></li>
+        <li class="breadcrumb-item"><a th:href="@{usuario/compras}" th:text="#{template.compras}">Compras</a></li>
+        <li class="breadcrumb-item active" th:text="#{template.detalleCompra}">Detalle de Compra</li>
       </ol>
 
       <!-- Blog Post -->
@@ -49,10 +49,10 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col" th:text="#{detcom.cant}">Cantidad</th>
-                  <th scope="col" th:text="#{detcom.prod}">Producto</th>                  
-                  <th scope="col" th:text="#{detcom.prec}">Precio</th>
-                  <th scope="col" th:text="#{detcom.tota}">Total</th>                  
+                  <th scope="col" th:text="#{detall.cantidad}">Cantidad</th>
+                  <th scope="col" th:text="#{detall.producto}">Producto</th>                  
+                  <th scope="col" th:text="#{detall.precio}">Precio</th>
+                  <th scope="col" th:text="#{detall.total}">Total</th>                  
                 </tr>
               </thead>
               <tbody>

@@ -31,12 +31,12 @@
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">
-        VEDA <small th:text="#{resum.ro}">Resumen de la orden</small>
+        VEDA <small th:text="#{order.resumen}">Resumen de la orden</small>
       </h1>
 
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item active" th:text="#{resum.ord}">Orden</li>
+        <li class="breadcrumb-item"><a th:href="@{/}" th:text="#{car.home}">Home</a></li>
+        <li class="breadcrumb-item active" th:text="#{order.order}">Orden</li>
       </ol>
 
       <!-- Blog Post -->
@@ -57,10 +57,10 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col" th:text="#{resum.prod}">Producto</th>
-                      <th scope="col" th:text="#{resum.prec}">Precio</th>
-                      <th scope="col" th:text="#{resum.cant}">Cantidad</th>
-                      <th scope="col" th:text="#{resum.tota}">Total</th>
+                      <th scope="col" th:text="#{detall.producto}">Producto</th>
+                      <th scope="col" th:text="#{detall.precio}">Precio</th>
+                      <th scope="col" th:text="#{detall.cantidad}">Cantidad</th>
+                      <th scope="col" th:text="#{detall.total}">Total</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -29,24 +29,24 @@
 
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">
-    VEDA ADMIN <small th:text="#{show.prd}">Productos</small>
+    VEDA ADMIN <small th:text="#{show.vepd}">Productos</small>
   </h1>
 
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a th:href="@{/administrador/home}" th:text="#{show.home}">Home</a></li>
+    <li class="breadcrumb-item"><a th:href="@{/administrador/home}" th:text="#{order.home}">Home</a></li>
     <li class="breadcrumb-item active" th:text="#{show.vepd}">Ver Productos</li>
   </ol>
 
   <a class="btn btn-primary" th:href="@{productos/create}" th:text="#{show.cepd}">Crear Producto</a>
-  <h2 th:text="#{show.prod}">Productos</h2>
+  <h2 th:text="#{show.vepd}">Productos</h2>
   <table class="table">
     <thead>
       <tr>
-        <th scope="col" th:text="#{show.nomb}">Nombre</th>
-        <th scope="col" th:text="#{show.desc}">Descripción</th>
+        <th scope="col" th:text="#{crea.dname}">Nombre</th>
+        <th scope="col" th:text="#{crea.ddesc}">Descripción</th>
         <th scope="col" th:text="#{show.inve}">Inventario</th>
-        <th scope="col" th:text="#{show.prec}">Precio</th>
-        <th scope="col" th:text="#{show.acci}">Acción</th>
+        <th scope="col" th:text="#{crea.dprec}">Precio</th>
+        <th scope="col" th:text="#{show.acci1}">Acción</th>
         <th scope="col" th:text="#{show.acci2}">Acción</th>
       </tr>
     </thead>
@@ -56,8 +56,8 @@
         <td th:text="${producto.descripcion}"></td>
         <td th:text="${producto.cantidad}"></td>
         <td th:text="${producto.precio}"></td>
-        <td><a  class="btn btn-warning" th:href="@{productos/edit/{id} (id=${producto.id}) }" th:text="#{show.edit}">Editar</a> </td>
-        <td><a  class="btn btn-danger" th:href="@{productos/delete/{id} (id=${producto.id}) }" th:text="#{show.elim}">Eliminar</a> </td>
+        <td><a  class="btn btn-warning" th:href="@{productos/edit/{id} (id=${producto.id}) }" th:text="#{show.acci1}">Editar</a> </td>
+        <td><a  class="btn btn-danger" th:href="@{productos/delete/{id} (id=${producto.id}) }" th:text="#{show.acci2}">Eliminar</a> </td>
       </tr>       
     </tbody>
   </table>
